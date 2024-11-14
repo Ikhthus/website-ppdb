@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('data_siswa', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('id_users');
+            $table->unsignedBigInteger('id_users');
             $table->string('nama_lengkap');
             $table->string('nisn');
             $table->string('kewarganegaraan');

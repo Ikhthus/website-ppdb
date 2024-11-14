@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('data_orang_tua', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('id_data_siswa');
-            $table->unsignedInteger('id_users');
+            $table->unsignedBigInteger('id_data_siswa');
+            $table->unsignedBigInteger('id_users');
             $table->string('nama_lengkap');
             $table->string('status');
             $table->string('nik');
