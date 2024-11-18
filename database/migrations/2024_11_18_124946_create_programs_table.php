@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('programs', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('id_data_siswa');
+            $table->unsignedBigInteger('id_users');
             $table->string('kelas');
+            $table->foreign('id_users')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('id_data_siswa')->references('id')->on('data_siswa')->onDelete('cascade');
             $table->timestamps();
         });
     }

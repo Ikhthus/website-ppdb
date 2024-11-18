@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\DataSiswa;
+use App\Models\Program;
+
 
 class DataSiswaController extends Controller
 {
@@ -86,5 +88,36 @@ class DataSiswaController extends Controller
         ]);
 
         return redirect()->route('user.dashboard')->with('success', 'Pendaftaran berhasil!');
+    }
+
+
+    public function createProgramKelas() {
+        return view('pendaftaran.create_program');
+    }
+    public function InsertProgramKelas(Request $request) {
+        $request->validate([
+            'kelas' => 'required',
+        ]);
+
+        $idUser = auth()->id();
+        $dataSiswa = DataSiswa::where('id_users', $idUser)->first();
+
+        if ($dataSiswa->id == null) {
+            return redirect()->route('pendaftaran.create')->with('error', 'Anda belum melakukan pendaftaran');
+        }
+        Program::create([
+            'id_users' => $idUser,
+            'id_data_siswa' => $dataSiswa->id,
+            'kelas' => $request->kelas
+        ]);
+
+        return redirect()->route('user.dashboard')->with('success', 'Pendaftaran berhasil!');
+    }
+
+    public function PrintBuktiPendaftaran() {
+        $idUser = auth()->id();
+        $dataSiswa = DataSiswa::where('id_users', $idUser)->first();
+        $program = Program::where('id_data_siswa', $dataSiswa->id)->first();
+        return view('pendaftaran.success', compact('dataSiswa', 'program'));
     }
 }

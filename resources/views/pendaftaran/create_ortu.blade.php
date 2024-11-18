@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pendaftaran Data Orang Tua</title>
-  <link rel="icon" type="image/png" href="{{ asset('logo1.png') }}">
+  <title>Form Data Orang Tua</title>
+  <link rel="icon" type="image/png" href="{{ asset('logo3.png') }}">
 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
   <style>
@@ -43,13 +44,17 @@
     .form-group {
       margin-bottom: 1.5rem;
     }
+
+    .form-check-label {
+      margin-left: 10px;
+    }
   </style>
 </head>
 
 <body>
   <div class="container mt-5">
     <div class="card p-4">
-      <h2>Pendaftaran Data Orang Tua</h2>
+      <h2 class="text-center mb-4"><i class="fas fa-user-plus"></i> Form Pengisian Data Orang Tua</h2>
       @if (session('success'))
       <div class="alert alert-success">{{ session('success') }}</div>
       @endif
@@ -70,9 +75,20 @@
           <label for="nama_lengkap">Nama Lengkap:</label>
           <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" required>
         </div>
-        <div class="form-group">
-          <label for="status">Status:</label>
-          <input type="text" class="form-control" id="status" name="status" required>
+        <div class="form-group col-md-6">
+          <label for="status">Status:</label> <br>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="masih_hidup" name="status" value="Masih Hidup">
+            <label class="form-check-label" for="masih_hidup">Masih Hidup</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="meninggal" name="status" value="Sudah Meninggal">
+            <label class="form-check-label" for="meninggal">Sudah Meninggal</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="tidak_diketahui" name="status" value="Tidak Diketahui">
+            <label class="form-check-label" for="tidak_diketahui">Tidak Diketahui</label>
+          </div>
         </div>
         <div class="form-group">
           <label for="nik">NIK:</label>
@@ -91,16 +107,145 @@
           <input type="date" class="form-control" id="tanggal_lahir" name="tanggal_lahir" required>
         </div>
         <div class="form-group">
-          <label for="pendidikan_terakhir">Pendidikan Terakhir:</label>
-          <input type="text" class="form-control" id="pendidikan_terakhir" name="pendidikan_terakhir" required>
+          <label for="pendidikan_terakhir">Pendidikan Terakhir:</label><br>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="sd_sederajat" name="pendidikan_terakhir" value="SD/Sederajat">
+            <label class="form-check-label" for="sd_sederajat">SD/Sederajat</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="smp_sederajat" name="pendidikan_terakhir" value="SMP/Sederajat">
+            <label class="form-check-label" for="smp_sederajat">SMP/Sederajat</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="sma_sederajat" name="pendidikan_terakhir" value="SMA/Sederajat">
+            <label class="form-check-label" for="sma_sederajat">SMA/Sederajat</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="d1" name="pendidikan_terakhir" value="D1">
+            <label class="form-check-label" for="d1">D1</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="d2" name="pendidikan_terakhir" value="D2">
+            <label class="form-check-label" for="d2">D2</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="d3" name="pendidikan_terakhir" value="D3">
+            <label class="form-check-label" for="d3">D3</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="d4_s1" name="pendidikan_terakhir" value="D4/S1">
+            <label class="form-check-label" for="d4_s1">D4/S1</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="s2" name="pendidikan_terakhir" value="S2">
+            <label class="form-check-label" for="s2">S2</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="s3" name="pendidikan_terakhir" value="S3">
+            <label class="form-check-label" for="s3">S3</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="lainnya" name="pendidikan_terakhir" value="Lainnya">
+            <label class="form-check-label" for="lainnya">Lainnya</label>
+          </div>
         </div>
         <div class="form-group">
           <label for="pekerjaan">Pekerjaan:</label>
-          <input type="text" class="form-control" id="pekerjaan" name="pekerjaan" required>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="pekerjaan" value="Tidak Bekerja" id="tidakBekerja">
+            <label class="form-check-label" for="tidakBekerja">Tidak Bekerja</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="pekerjaan" value="Pilot/Pramugara" id="pilot">
+            <label class="form-check-label" for="pilot">Pilot/Pramugara</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="pekerjaan" value="Pensiunan" id="pensiunan">
+            <label class="form-check-label" for="pensiunan">Pensiunan</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="pekerjaan" value="Pedagang" id="pedagang">
+            <label class="form-check-label" for="pedagang">Pedagang</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="pekerjaan" value="PNS" id="pns">
+            <label class="form-check-label" for="pns">PNS</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="pekerjaan" value="Petani/Peternak" id="petani">
+            <label class="form-check-label" for="petani">Petani/Peternak</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="pekerjaan" value="TNI/Polisi " id="tniPolisi">
+            <label class="form-check-label" for="tniPolisi">TNI/Polisi</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="pekerjaan" value="Nelayan" id="nelayan">
+            <label class="form-check-label" for="nelayan">Nelayan</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="pekerjaan" value="Guru/Dosen" id="guruDosen">
+            <label class="form-check-label" for="guruDosen">Guru/Dosen</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="pekerjaan" value="Buruh (Tani/Pabrik/Bangunan)" id="buruh">
+            <label class="form-check-label" for="buruh">Buruh (Tani/Pabrik/Bangunan)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="pekerjaan" value="Pegawai Swasta" id="pegawaiSwasta">
+            <label class="form-check-label" for="pegawaiSwasta">Pegawai Swasta</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="pekerjaan" value="Sopir/Masinis/Kondaktur" id="sopir">
+            <label class="form-check-label" for="sopir">Sopir/Masinis/Kondaktur</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="pekerjaan" value="Pengacara/Jaksa Hakim/Notaris" id="pengacara">
+            <label class="form-check-label" for="pengacara">Pengacara/Jaksa Hakim/Notaris</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="pekerjaan" value="Politikus" id="politikus">
+            <label class="form-check-label" for="politikus">Politikus</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="pekerjaan" value="Dokter/Bidan/Perawat" id="dokter">
+            <label class="form-check-label" for="dokter">Dokter/Bidan/Perawat</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="pekerjaan" value="Lainnya" id="lainnya">
+            <label class="form-check-label" for="lainnya">Lainnya</label>
+          </div>
         </div>
         <div class="form-group">
           <label for="penghasilan">Penghasilan:</label>
-          <input type="text" class="form-control" id="penghasilan" name="penghasilan" required>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="penghasilan" value="Kurang dari 500.000" id="kurang500">
+            <label class="form-check-label" for="kurang500">Kurang dari 500.000</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="penghasilan" value="500.000 - 1.000.000" id="500-1000">
+            <label class="form-check-label" for="500-1000">500.000 - 1.000.000</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="penghasilan" value="1.000.001 - 2.000.000" id="1000-2000">
+            <label class="form-check-label" for="1000-2000">1.000.001 - 2.000.000</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="penghasilan" value="2.000.001 - 3.000.000" id="2000-3000">
+            <label class="form-check-label" for="2000-3000">2.000.001 - 3.000.000</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="penghasilan" value="3.000.001 - 5.000.000" id="3000-5000">
+            <label class="form-check-label" for="3000-5000">3.000.001 - 5.000.000</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="penghasilan" value="Lebih dari 5.000.000" id="lebih5000">
+            <label class="form-check-label" for="lebih5000">Lebih dari 5.000.000</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="penghasilan" value="Tidak Ada" id="tidakAda">
+            <label class="form-check-label" for="tidakAda">Tidak Ada</label>
+          </div>
         </div>
         <div class="form-group">
           <label for="no_handphone_aktif">No Handphone Aktif:</label>
@@ -108,7 +253,30 @@
         </div>
         <div class="form-group">
           <label for="status_tempat_tinggal">Status Tempat Tinggal:</label>
-          <input type="text" class="form-control" id="status_tempat_tinggal" name="status_tempat_tinggal" required>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="status_tempat_tinggal" value="Milik Sendiri" id="milikSendiri">
+            <label class="form-check-label" for="milikSendiri">Milik Sendiri</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="status_tempat_tinggal" value="Rumah Dinas" id="rumahDinas">
+            <label class="form-check-label" for="rumahDinas">Rumah Dinas</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="status_tempat_tinggal" value="Rumah Orang Tua" id="rumahOrangTua">
+            <label class="form-check-label" for="rumahOrangTua">Rumah Orang Tua</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="status_tempat_tinggal" value="Sewa/Kontrak" id="sewaKontrak">
+            <label class="form-check-label" for="sewaKontrak">Sewa/Kontrak</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="status_tempat_tinggal" value="Rumah Saudara/Kerabat" id="rumahSaudara">
+            <label class="form-check-label" for="rumahSaudara">Rumah Saudara/Kerabat</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="status_tempat_tinggal" value="Lainnya" id="lainnyaTempatTinggal">
+            <label class="form-check-label" for="lainnyaTempatTinggal">Lainnya</label>
+          </div>
         </div>
         <div class="form-group">
           <label for="alamat">Alamat:</label>
@@ -144,9 +312,16 @@
         </div>
         <div class="form-group">
           <label for="hubungan">Hubungan:</label>
-          <input type="text" class="form-control" id="hubungan" name="hubungan" required>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="hubungan" value="Ibu" id="hubunganIbu">
+            <label class="form-check-label" for="hubunganIbu">Ibu</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="hubungan" value="Ayah" id="hubunganAyah">
+            <label class="form-check-label" for="hubunganAyah">Ayah</label>
+          </div>
         </div>
-        <button type="submit" class="btn btn-primary btn-block">Daftar</button>
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
       </form>
     </div>
   </div>

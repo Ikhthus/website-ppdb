@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pendaftaran Siswa</title>
-    <link rel="icon" type="image/png" href="{{ asset('logo1.png') }}">
+    <title>Form Data Siswa</title>
+    <link rel="icon" type="image/png" href="{{ asset('logo3.png') }}">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <style>
@@ -48,7 +48,7 @@
 <body>
     <div class="container mt-5">
         <div class="card p-4">
-            <h2 class="text-center mb-4"><i class="fas fa-user-plus"></i> Form Pendaftaran Data Siswa</h2>
+            <h2 class="text-center mb-4"><i class="fas fa-user-plus"></i> Form Pengisian Data Siswa</h2>
 
             @if (session('success'))
             <div class="alert alert-success">{{ session('success') }}</div>
@@ -125,35 +125,35 @@
                 <div class="form-group col-md-6">
                     <label>Status Tempat Tinggal</label><br>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="jalan_kaki" name="status_tempat_tinggal[]" value="Tinggal dengan Orangtua/Wali">
-                        <label class="form-check-label" for="jalan_kaki">Jalan Kaki</label>
+                        <input class="form-check-input" type="checkbox" id="tinggal_orangtua" name="status_tempat_tinggal" value="Tinggal dengan Orangtua/Wali">
+                        <label class="form-check-label" for="tinggal_orangtua">Tinggal dengan Orangtua/Wali</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="sepeda" name="status_tempat_tinggal[]" value="Ikut Saudara/Kerabat">
-                        <label class="form-check-label" for="sepeda">Sepeda</label>
+                        <input class="form-check-input" type="checkbox" id="kerabat" name="status_tempat_tinggal" value="Ikut Saudara/Kerabat">
+                        <label class="form-check-label" for="kerabat">Ikut Saudara/Kerabat</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="sepeda_motor" name="status_tempat_tinggal[]" value="Asrama Madrasah">
-                        <label class="form-check-label" for="sepeda_motor">Sepeda Motor</label>
+                        <input class="form-check-input" type="checkbox" id="asrama_madrasah" name="status_tempat_tinggal" value="Asrama Madrasah">
+                        <label class="form-check-label" for="asrama_madrasah">Asrama Madrasah</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="mobil_pribadi" name="status_tempat_tinggal[]" value="Kontrak/Kost">
-                        <label class="form-check-label" for="mobil_pribadi">Mobil Pribadi</label>
+                        <input class="form-check-input" type="checkbox" id="kontrak_kost" name="status_tempat_tinggal" value="Kontrak/Kost">
+                        <label class="form-check-label" for="kontrak_kost">Kontrak/Kost</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="antar_jemput" name="status_tempat_tinggal[]" value="Tinggal di Asrama Pesantren">
-                        <label class="form-check-label" for="antar_jemput">Antar Jemput</label>
+                        <input class="form-check-input" type="checkbox" id="asrama_pesantren" name="status_tempat_tinggal" value="Tinggal di Asrama Pesantren">
+                        <label class="form-check-label" for="asrama_pesantren">Tinggal di Asrama Pesantren</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="angkutan_umum" name="status_tempat_tinggal[]" value="Panti Asuhan">
-                        <label class="form-check-label" for="angkutan_umum">Angkutan Umum</label>
+                        <input class="form-check-input" type="checkbox" id="panti_asuhan" name="status_tempat_tinggal" value="Panti Asuhan">
+                        <label class="form-check-label" for="panti_asuhan">Panti Asuhan</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="perahu_sampan" name="status_tempat_tinggal[]" value="Rumah Singgah">
-                        <label class="form-check-label" for="perahu_sampan">Perahu/Sampan</label>
+                        <input class="form-check-input" type="checkbox" id="rumah_singgah" name="status_tempat_tinggal" value="Rumah Singgah">
+                        <label class="form-check-label" for="rumah_singgah">Rumah Singgah</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="lainnya" name="status_tempat_tinggal[]" value="Lainnya">
+                        <input class="form-check-input" type="checkbox" id="lainnya" name="status_tempat_tinggal" value="Lainnya">
                         <label class="form-check-label" for="lainnya">Lainnya</label>
                     </div>
                 </div>
@@ -184,142 +184,142 @@
                 <div class="form-group col-md-6">
                     <label>Transport Ke Sekolah</label><br>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="jalan_kaki" name="transport_ke_sekolah[]" value="Jalan Kaki">
+                        <input class="form-check-input" type="checkbox" id="jalan_kaki" name="transport_ke_sekolah" value="Jalan Kaki">
                         <label class="form-check-label" for="jalan_kaki">Jalan Kaki</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="sepeda" name="transport_ke_sekolah[]" value="Sepeda">
+                        <input class="form-check-input" type="checkbox" id="sepeda" name="transport_ke_sekolah" value="Sepeda">
                         <label class="form-check-label" for="sepeda">Sepeda</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="sepeda_motor" name="transport_ke_sekolah[]" value="Sepeda Motor">
+                        <input class="form-check-input" type="checkbox" id="sepeda_motor" name="transport_ke_sekolah" value="Sepeda Motor">
                         <label class="form-check-label" for="sepeda_motor">Sepeda Motor</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="mobil_pribadi" name="transport_ke_sekolah[]" value="Mobil Pribadi">
+                        <input class="form-check-input" type="checkbox" id="mobil_pribadi" name="transport_ke_sekolah" value="Mobil Pribadi">
                         <label class="form-check-label" for="mobil_pribadi">Mobil Pribadi</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="antar_jemput" name="transport_ke_sekolah[]" value="Antar Jemput">
+                        <input class="form-check-input" type="checkbox" id="antar_jemput" name="transport_ke_sekolah" value="Antar Jemput">
                         <label class="form-check-label" for="antar_jemput">Antar Jemput</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="angkutan_umum" name="transport_ke_sekolah[]" value="Angkutan Umum">
+                        <input class="form-check-input" type="checkbox" id="angkutan_umum" name="transport_ke_sekolah" value="Angkutan Umum">
                         <label class="form-check-label" for="angkutan_umum">Angkutan Umum</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="perahu_sampan" name="transport_ke_sekolah[]" value="Perahu/Sampan">
+                        <input class="form-check-input" type="checkbox" id="perahu_sampan" name="transport_ke_sekolah" value="Perahu/Sampan">
                         <label class="form-check-label" for="perahu_sampan">Perahu/Sampan</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="lainnya" name="transport_ke_sekolah[]" value="Lainnya">
+                        <input class="form-check-input" type="checkbox" id="lainnya" name="transport_ke_sekolah" value="Lainnya">
                         <label class="form-check-label" for="lainnya">Lainnya</label>
                     </div>
                 </div>
                 <div class="form-group col-md-6">
                     <label>Jarak Tempuh</label><br>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="kurang_dari_5_km" name="jarak_tempuh[]" value="Kurang dari 5 Km">
+                        <input class="form-check-input" type="checkbox" id="kurang_dari_5_km" name="jarak_tempuh" value="Kurang dari 5 Km">
                         <label class="form-check-label" for="kurang_dari_5_km">Kurang dari 5 Km</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="antara_5_10_km" name="jarak_tempuh[]" value="Antara 5-10 Km">
+                        <input class="form-check-input" type="checkbox" id="antara_5_10_km" name="jarak_tempuh" value="Antara 5-10 Km">
                         <label class="form-check-label" for="antara_5_10_km">Antara 5-10 Km</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="antara_11_20_km" name="jarak_tempuh[]" value="Antara 11-20 Km">
+                        <input class="form-check-input" type="checkbox" id="antara_11_20_km" name="jarak_tempuh" value="Antara 11-20 Km">
                         <label class="form-check-label" for="antara_11_20_km">Antara 11-20 Km</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="antara_21_30_km" name="jarak_tempuh[]" value="Antara 21-30 Km">
+                        <input class="form-check-input" type="checkbox" id="antara_21_30_km" name="jarak_tempuh" value="Antara 21-30 Km">
                         <label class="form-check-label" for="antara_21_30_km">Antara 21-30 Km</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="lebih_dari_30_km" name="jarak_tempuh[]" value="Lebih dari 30 Km">
+                        <input class="form-check-input" type="checkbox" id="lebih_dari_30_km" name="jarak_tempuh" value="Lebih dari 30 Km">
                         <label class="form-check-label" for="lebih_dari_30_km">Lebih dari 30 Km</label>
                     </div>
                 </div>
                 <div class="form-group col-md-6">
                     <label>Waktu Tempuh</label><br>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="1_10_menit" name="waktu_tempuh[]" value="1-10 Menit">
+                        <input class="form-check-input" type="checkbox" id="1_10_menit" name="waktu_tempuh" value="1-10 Menit">
                         <label class="form-check-label" for="1_10_menit">1-10 Menit</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="10_19_menit" name="waktu_tempuh[]" value="10-19 Menit">
+                        <input class="form-check-input" type="checkbox" id="10_19_menit" name="waktu_tempuh" value="10-19 Menit">
                         <label class="form-check-label" for="10_19_menit">10-19 Menit</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="20_29_menit" name="waktu_tempuh[]" value="20-29 Menit">
+                        <input class="form-check-input" type="checkbox" id="20_29_menit" name="waktu_tempuh" value="20-29 Menit">
                         <label class="form-check-label" for="20_29_menit">20-29 Menit</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="30_39_menit" name="waktu_tempuh[]" value="30-39 Menit">
+                        <input class="form-check-input" type="checkbox" id="30_39_menit" name="waktu_tempuh" value="30-39 Menit">
                         <label class="form-check-label" for="30_39_menit">30-39 Menit</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="1_2_jam" name="waktu_tempuh[]" value="1-2 Jam">
+                        <input class="form-check-input" type="checkbox" id="1_2_jam" name="waktu_tempuh" value="1-2 Jam">
                         <label class="form-check-label" for="1_2_jam">1-2 Jam</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="lebih_dari_2_jam" name="waktu_tempuh[]" value="> 2 Jam">
+                        <input class="form-check-input" type="checkbox" id="lebih_dari_2_jam" name="waktu_tempuh" value="> 2 Jam">
                         <label class="form-check-label" for="lebih_dari_2_jam">&gt; 2 Jam</label>
                     </div>
                 </div>
                 <div class="form-group col-md-6">
                     <label>Membiayai Sekolah</label><br>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="orang_tua" name="membiayai_sekolah[]" value="Orang Tua">
+                        <input class="form-check-input" type="checkbox" id="orang_tua" name="membiayai_sekolah" value="Orang Tua">
                         <label class="form-check-label" for="orang_tua">Orang Tua</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="tanggungan_sendiri" name="membiayai_sekolah[]" value="Tanggungan Sendiri">
+                        <input class="form-check-input" type="checkbox" id="tanggungan_sendiri" name="membiayai_sekolah" value="Tanggungan Sendiri">
                         <label class="form-check-label" for="tanggungan_sendiri">Tanggungan Sendiri</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="wali_orangtua_asuh" name="membiayai_sekolah[]" value="Wali/Orangtua Asuh">
+                        <input class="form-check-input" type="checkbox" id="wali_orangtua_asuh" name="membiayai_sekolah" value="Wali/Orangtua Asuh">
                         <label class="form-check-label" for="wali_orangtua_asuh">Wali/Orangtua Asuh</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="lainnya" name="membiayai_sekolah[]" value="Lainnya">
+                        <input class="form-check-input" type="checkbox" id="lainnya" name="membiayai_sekolah" value="Lainnya">
                         <label class="form-check-label" for="lainnya">Lainnya</label>
                     </div>
                 </div>
                 <div class="form-group col-md-6">
                     <label>Pendidikan Pra-Sekolah</label><br>
                     <div class=" form-check">
-                        <input class="form-check-input" type="checkbox" id="pernah_tk_ra" name="pra_sekolah[]" value="Pernah TK/RA">
+                        <input class="form-check-input" type="checkbox" id="pernah_tk_ra" name="pra_sekolah" value="Pernah TK/RA">
                         <label class="form-check-label" for="pernah_tk_ra">Pernah TK/RA</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="pernah_paud" name="pra_sekolah[]" value="Pernah PAUD">
+                        <input class="form-check-input" type="checkbox" id="pernah_paud" name="pra_sekolah" value="Pernah PAUD">
                         <label class="form-check-label" for="pernah_paud">Pernah PAUD</label>
                     </div>
                 </div>
                 <div class="form-group col-md-6">
                     <label>Imunisasi</label><br>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="hepatitis_b" name="imunisasi[]" value="Hepatitis B">
+                        <input class="form-check-input" type="checkbox" id="hepatitis_b" name="imunisasi" value="Hepatitis B">
                         <label class="form-check-label" for="hepatitis_b">Hepatitis B</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="polio" name="imunisasi[]" value="Polio">
+                        <input class="form-check-input" type="checkbox" id="polio" name="imunisasi" value="Polio">
                         <label class="form-check-label" for="polio">Polio</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="bcg" name="imunisasi[]" value="BCG">
+                        <input class="form-check-input" type="checkbox" id="bcg" name="imunisasi" value="BCG">
                         <label class="form-check-label" for="bcg">BCG</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="campak" name="imunisasi[]" value="Campak">
+                        <input class="form-check-input" type="checkbox" id="campak" name="imunisasi" value="Campak">
                         <label class="form-check-label" for="campak">Campak</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="dpt" name="imunisasi[]" value="DPT">
+                        <input class="form-check-input" type="checkbox" id="dpt" name="imunisasi" value="DPT">
                         <label class="form-check-label" for="dpt">DPT</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="covid" name="imunisasi[]" value="Covid">
+                        <input class="form-check-input" type="checkbox" id="covid" name="imunisasi" value="Covid">
                         <label class="form-check-label" for="covid">Covid</label>
                     </div>
                 </div>

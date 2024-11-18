@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="icon" type="image/png" href="{{ asset('logo1.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('logo3.png') }}">
     <!-- Link ke CSS Bootstrap -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             background-color: #f8f9fa;
         }
+
         .login-container {
             max-width: 400px;
             margin: auto;
@@ -20,38 +22,48 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
             margin-top: 100px;
         }
+
         .login-container h2 {
             margin-bottom: 20px;
             color: seagreen;
         }
+
         .form-control {
             border-radius: 5px;
         }
+
         .btn-primary {
             background-color: seagreen;
             border: none;
         }
+
         .btn-primary:hover {
             background-color: darkgreen;
         }
+
+        .register-link {
+            margin-top: 15px;
+            text-align: center;
+        }
     </style>
 </head>
+
 <body>
     <div class="login-container">
         <h2 class="text-center">Login</h2>
         @if (session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
         @endif
         @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
         @endif
         <form action="{{ route('user.login') }}" method="POST" class="mt-4">
             @csrf
@@ -65,6 +77,9 @@
             </div>
             <button type="submit" class="btn btn-primary btn-block">Login</button>
         </form>
+        <div class="register-link">
+            <p>Belum punya akun? <a href="{{ route('user.register') }}">Daftar di sini</a></p>
+        </div>
     </div>
 
     <!-- Link ke JS Bootstrap dan jQuery -->
@@ -72,4 +87,5 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
