@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DataSiswaController;
 use App\Http\Controllers\DataOrangTuaController;
 use App\Http\Controllers\DataWaliSiswaController;
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,4 +40,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard/pendaftaran/program', [DataSiswaController::class, 'createProgramKelas'])->name('pendaftaran.create.program');
     Route::post('/dashboard/pendaftaran/program', [DataSiswaController::class, 'InsertProgramKelas'])->name('pendaftaran.store.program');
     Route::get('dashboard/pendaftaran/cetak', [DataSiswaController::class, 'PrintBuktiPendaftaran'])->name('pendaftaran.cetak');
+});
+
+Route::middleware(['auth:admin', 'admin'])->group(function () {
+    Route::get('/admin/dashboard',[AdminController::class, 'dashboard'] )->name('admin.dashboard');
 });

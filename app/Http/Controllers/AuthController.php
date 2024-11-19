@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
+use Illuminate\Support\Facades\Log;
 
 class AuthController extends Controller
 {
@@ -29,6 +30,7 @@ class AuthController extends Controller
             'asal_sekolah' => $request->asal_sekolah,
             'password' => Hash::make($request->password),
         ]);
+        Log::info('User registered successfully');
 
         return redirect()->route('user.login')->with('success', 'User registered successfully!');
     }
