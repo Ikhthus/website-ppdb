@@ -8,14 +8,15 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Facades\Auth;
 
-class Program extends Authenticatable
+class Verifikasi extends Authenticatable
 {
+    use HasFactory;
     use HasApiTokens, HasFactory, Notifiable;
-    protected $table = 'programs';
+    protected $table = 'verifikasi';
     protected $fillable = [
         'id_data_siswa',
         'id_users',
-        'kelas',
+        'status'
     ];
 
     public function dataSiswa()
@@ -29,8 +30,8 @@ class Program extends Authenticatable
         return $this->belongsTo(User::class, 'id_users');
     }
 
-    public function verifikasi()
+    public function program()
     {
-        return $this->hasOne(Verifikasi::class, 'id_data_siswa', 'id_data_siswa');
+        return $this->belongsTo(Program::class, 'id_data_siswa', 'id_data_siswa');
     }
 }

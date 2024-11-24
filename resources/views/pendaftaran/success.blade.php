@@ -43,8 +43,8 @@
     <div class="container">
         <div class="header">
             <img src="{{asset('logo3.png')}}" alt="Logo">
-            <h2>Bukti Pendaftaran</h2>
-            <p><strong>MIN1 Tangerang Selatan</strong></p>
+            <h2>Bukti Pendaftaran Online</h2>
+            <p><strong>MIN 1 Kota Tangsel</strong></p>
         </div>
         <div class="card">
             <div class="card-body">

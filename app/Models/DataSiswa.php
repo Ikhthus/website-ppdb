@@ -13,6 +13,7 @@ class DataSiswa extends Authenticatable
     protected $table = 'data_siswa';
     protected $fillable = [
         'id_users',
+        'no_pendaftaran',
         'nama_lengkap',
         'nisn',
         'kewarganegaraan',
@@ -44,5 +45,12 @@ class DataSiswa extends Authenticatable
         'nama_kepala_keluarga',
     ];
 
-    
+    public function program()
+    {
+        return $this->hasOne(Program::class, 'id_data_siswa');
+    }
+    public function verifikasi()
+{
+    return $this->hasOne(Verifikasi::class, 'id_data_siswa');
+}
 }

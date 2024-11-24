@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\DataOrangTua;
-use App\Models\DataSiswa;
 use Illuminate\Http\Request;
+use App\Models\DataSiswa;
+use App\Models\DataIbu;
 use Illuminate\Support\Facades\Auth;
 
-class DataOrangTuaController extends Controller
+class DataIbuController extends Controller
 {
     //
     public function create()
     {
-        return view('pendaftaran.create_ortu'); // Form Pendaftaran
+        return view('pendaftaran.create_ibu'); // Form Pendaftaran
     }
 
     public function store(Request $request)
@@ -47,8 +47,7 @@ class DataOrangTuaController extends Controller
         $validatedData['id_users'] = $user->id;
         $validatedData['id_data_siswa'] = $dataSiswa->id;
 
-        DataOrangTua::create($validatedData);
+        DataIbu::create($validatedData);
         return redirect()->route('user.dashboard')->with('success', 'Pendaftaran berhasil!');
     }
-    
 }

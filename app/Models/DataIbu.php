@@ -7,10 +7,10 @@ use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class DataOrangTua extends Authenticatable
+class DataIbu extends Authenticatable
 {
     use HasApiTokens,HasFactory, Notifiable;
-    protected $table = 'data_orang_tua';
+    protected $table = 'data_ibu';
     protected $fillable = [
         'id_data_siswa',
         'id_users',
@@ -33,6 +33,5 @@ class DataOrangTua extends Authenticatable
         'nama_jalan',
         'kode_pos',
         'nomor_kk', 
-        'hubungan'
     ];
 }

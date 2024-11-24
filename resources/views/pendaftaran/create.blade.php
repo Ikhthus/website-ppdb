@@ -75,8 +75,15 @@
                     <input type="text" class="form-control" id="nisn" name="nisn" required>
                 </div>
                 <div class="form-group">
-                    <label for="kewarganegaraan">Kewarganegaraan</label>
-                    <input type="text" class="form-control" id="kewarganegaraan" name="kewarganegaraan" required>
+                    <label for="kewarganegaraan">Kewarganegaraan:</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="WNI" name="kewarganegaraan" value="WNI">
+                        <label class="form-check-label" for="WNI">WNI</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="WNA" name="kewarganegaraan" value="WNA">
+                        <label class="form-check-label" for="WNA">WNA</label>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="nik">NIK</label>
@@ -267,7 +274,7 @@
                     </div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label>Membiayai Sekolah</label><br>
+                    <label>Yang Membiayai Sekolah</label><br>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="orang_tua" name="membiayai_sekolah" value="Orang Tua">
                         <label class="form-check-label" for="orang_tua">Orang Tua</label>

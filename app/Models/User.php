@@ -39,4 +39,11 @@ class User extends Authenticatable
     // protected $casts = [
     //     'email_verified_at' => 'datetime',
     // ];
+
+        // Relasi ke tabel programs
+        public function program()
+        {
+            return $this->hasOne(Program::class, 'id_users');
+        }
+    
 }

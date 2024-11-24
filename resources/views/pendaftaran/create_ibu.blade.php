@@ -54,7 +54,7 @@
 <body>
   <div class="container mt-5">
     <div class="card p-4">
-      <h2 class="text-center mb-4"><i class="fas fa-user-plus"></i> Form Pengisian Data Orang Tua</h2>
+      <h2 class="text-center mb-4"><i class="fas fa-user-plus"></i> Form Pengisian Data Ibu</h2>
       @if (session('success'))
       <div class="alert alert-success">{{ session('success') }}</div>
       @endif
@@ -69,7 +69,7 @@
       </div>
       @endif
 
-      <form action="{{ route('pendaftaran.store.ortu') }}" method="POST">
+      <form action="{{ route('pendaftaran.store.ibu') }}" method="POST">
         @csrf
         <div class="form-group">
           <label for="nama_lengkap">Nama Lengkap:</label>
@@ -96,7 +96,14 @@
         </div>
         <div class="form-group">
           <label for="kewarganegaraan">Kewarganegaraan:</label>
-          <input type="text" class="form-control" id="kewarganegaraan" name="kewarganegaraan" required>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="WNI" name="kewarganegaraan" value="WNI">
+            <label class="form-check-label" for="WNI">WNI</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="WNA" name="kewarganegaraan" value="WNA">
+            <label class="form-check-label" for="WNA">WNA</label>
+          </div>
         </div>
         <div class="form-group">
           <label for="tempat_lahir">Tempat Lahir:</label>
@@ -309,17 +316,6 @@
         <div class="form-group">
           <label for="nomor_kk">Nomor KK:</label>
           <input type="text" class="form-control" id="nomor_kk" name="nomor_kk" required>
-        </div>
-        <div class="form-group">
-          <label for="hubungan">Hubungan:</label>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="hubungan" value="Ibu" id="hubunganIbu">
-            <label class="form-check-label" for="hubunganIbu">Ibu</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="hubungan" value="Ayah" id="hubunganAyah">
-            <label class="form-check-label" for="hubunganAyah">Ayah</label>
-          </div>
         </div>
         <button type="submit" class="btn btn-primary btn-block">Submit</button>
       </form>

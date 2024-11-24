@@ -5,14 +5,20 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\DataSiswa;
 use App\Models\Program;
-
+use App\Models\Verifikasi;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Dompdf\Dompdf;
 
 class DataSiswaController extends Controller
 {
     //
     public function index()
     {
-        return view('dashboard.index'); // Halaman Dashboard
+        $user = auth()->user();
+
+        // Ambil data verifikasi untuk user saat ini
+        $verifikasi = Verifikasi::where('id_users', $user->id)->first();
+        return view('dashboard.index', compact('verifikasi')); // Halaman Dashboard
     }
 
     public function create()
@@ -54,8 +60,10 @@ class DataSiswaController extends Controller
             'nama_kepala_keluarga' => 'required|string|max:100',
         ]);
 
+        $uniqueNumber = intval(str_replace('.', '', uniqid('', true)));
         DataSiswa::create([
             'id_users' => auth()->id(),
+            'no_pendaftaran' => $uniqueNumber,
             'nama_lengkap' => $request->nama_lengkap,
             'nisn' => $request->nisn,
             'kewarganegaraan' => $request->kewarganegaraan,
@@ -91,10 +99,12 @@ class DataSiswaController extends Controller
     }
 
 
-    public function createProgramKelas() {
+    public function createProgramKelas()
+    {
         return view('pendaftaran.create_program');
     }
-    public function InsertProgramKelas(Request $request) {
+    public function InsertProgramKelas(Request $request)
+    {
         $request->validate([
             'kelas' => 'required',
         ]);
@@ -114,10 +124,54 @@ class DataSiswaController extends Controller
         return redirect()->route('user.dashboard')->with('success', 'Pendaftaran berhasil!');
     }
 
-    public function PrintBuktiPendaftaran() {
+    public function PrintBuktiPendaftaran()
+    {
         $idUser = auth()->id();
         $dataSiswa = DataSiswa::where('id_users', $idUser)->first();
         $program = Program::where('id_data_siswa', $dataSiswa->id)->first();
         return view('pendaftaran.success', compact('dataSiswa', 'program'));
+    }
+
+    public function PrintKartuUjian()
+    {
+        // $user = auth()->user();
+
+        // $dataSiswa = DataSiswa::where('id_users', $user->id)->first();
+        // $program = Program::where('id_data_siswa', $dataSiswa->id)->first();
+
+
+        // $pdf = Pdf::loadView('pendaftaran.kartu', [
+        //     'dataSiswa' => $dataSiswa,
+        //     'program' => $program,
+        // ])->setPaper('A4', 'portrait')->setOptions([
+        //     'isHtml5ParserEnabled' => true,
+        //     'isRemoteEnabled' => true,
+        //     'dpi' => 120, 
+        //     'defaultFont' => 'sans-serif',
+        // ]);
+        // ->setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif'])->setOptions(['isRemoteEnabled' => true]);
+        // return $pdf->stream('kartu-ppdb.pdf');
+        // return view('pendaftaran.kartu', compact('dataSiswa', 'program'));
+        $user = auth()->user();
+        $dataSiswa = DataSiswa::where('id_users', $user->id)->first();
+        $program = Program::where('id_data_siswa', $dataSiswa->id)->first();
+
+        $logoPath = public_path('logo3.png');
+        $logoData = base64_encode(file_get_contents($logoPath));
+        $logoSrc = 'data:image/png;base64,' . $logoData;
+
+        $pdf = Pdf::loadView('pendaftaran.kartu', [
+            'dataSiswa' => $dataSiswa,
+            'program' => $program,
+            'logoSrc' => $logoSrc
+        ])->setPaper('A4', 'portrait')->setOptions([
+            'isHtml5ParserEnabled' => true,
+            'isRemoteEnabled' => true,
+            'dpi' => 120,
+            'defaultFont' => 'sans-serif',
+        ]);
+
+        // return view('pendaftaran.kartu', compact('dataSiswa', 'program', 'logoSrc'));
+        return $pdf->download('kartu-ppdb.pdf');
     }
 }
