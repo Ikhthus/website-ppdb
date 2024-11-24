@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="id">
 
 <head>
@@ -10,13 +9,15 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f4f4f4;
     }
 
     .card {
-      width: 800px;
-      margin: 20px auto;
+      width: 595px; /* Ukuran standar A4 dengan margin */
+      margin: 40px auto;
       border: 1px solid #000;
       padding: 20px;
+      background: #fff;
     }
 
     .header {
@@ -25,51 +26,77 @@
     }
 
     .header img {
-      width: 100px;
+      width: 80px;
       height: auto;
+      margin-bottom: 10px;
     }
 
-    .header h1,
+    .header h1 {
+      font-size: 18px;
+      margin: 5px 0;
+    }
+
     .header h2 {
-      margin: 0;
+      font-size: 16px;
+      margin: 5px 0;
     }
 
-    .content {
-      margin-bottom: 20px;
+    .header h3 {
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 20px 0;
+      border: 1px solid #000;
+      padding: 10px;
     }
 
     .content table {
       width: 100%;
       border-collapse: collapse;
+      margin-bottom: 20px;
     }
 
     .content table td {
       padding: 5px;
       vertical-align: top;
+      font-size: 14px;
+    }
+
+    .content table td:first-child {
+      width: 150px;
     }
 
     .flex-container {
       display: flex;
       justify-content: space-between;
-      /* Menyebarkan elemen secara merata */
-      align-items: flex-end;
-      /* Rata bawah */
-      width: 100%;
+      align-items: flex-start;
     }
 
     .photo-box {
-      width: 100px;
-      height: 133px;
+      width: 113px; /* 3 cm */
+      height: 151px; /* 4 cm */
       border: 1px dashed #000;
-      display:flexbox;
+      display: flex;
       align-items: center;
       justify-content: center;
+      text-align: center;
+      font-size: 14px;
+      color: #000;
     }
 
     .signature {
       text-align: right;
-      margin-left: auto;
-      /* Memindahkan ke kanan */
+      font-size: 14px;
+    }
+
+    .signature strong {
+      display: block;
+      margin-top: 60px; /* Simulasi ruang tanda tangan */
     }
   </style>
 </head>
@@ -81,9 +108,12 @@
       <h1>PENERIMAAN PESERTA DIDIK BARU</h1>
       <h2>MIN 1 KOTA TANGERANG SELATAN</h2>
       <h3>TAHUN PELAJARAN 2025/2026</h3>
-      <hr>
-      <h2>KARTU PESERTA PPDB</h2>
     </div>
+
+    <div class="title">
+      KARTU PESERTA PPDB
+    </div>
+
     <div class="content">
       <table>
         <tr>
@@ -107,20 +137,19 @@
           <td>: {{ auth()->user()->asal_sekolah }}</td>
         </tr>
       </table>
-      <br><br>
-      <br><br>
+
       <div class="flex-container">
+        <br><br>
         <div class="photo-box">
-          Foto Peserta<br>3 x 4
+          <br><br><br>
+          Foto Peserta<br>
+          3 x 4
         </div>
-        <div class="signature">
+        <!-- <div class="signature">
           Ketua Panitia PPDB<br>
           MIN 1 Kota Tangsel<br>
-          <br>
-          <br>
-          <br>
           <strong>M. Nurul Ardi Rosyidi</strong>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

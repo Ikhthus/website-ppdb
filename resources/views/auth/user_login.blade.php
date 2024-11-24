@@ -80,6 +80,9 @@
         <div class="register-link">
             <p>Belum punya akun? <a href="{{ route('user.register') }}">Daftar di sini</a></p>
         </div>
+        <div class="register-link">
+            <p><a href="{{ route('password.request') }}">Lupa password</a></p>
+        </div>
     </div>
 
     <!-- Link ke JS Bootstrap dan jQuery -->

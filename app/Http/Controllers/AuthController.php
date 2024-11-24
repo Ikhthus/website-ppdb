@@ -56,6 +56,34 @@ class AuthController extends Controller
         return back()->withErrors(['nik' => 'Invalid NIK or password']);
     }
 
+
+    // lupa password
+    public function showForgotPasswordForm()
+    {
+        return view('auth.lupa_password');
+    }
+    public function resetPassword(Request $request)
+    {
+        $request->validate([
+            'nik' => 'required|exists:users,nik',  // Validasi agar NIK yang dimasukkan ada di database
+            'password' => 'required|string|min:6|confirmed',  // Validasi password baru
+        ]);
+
+        // Cari user berdasarkan NIK
+        $user = User::where('nik', $request->nik)->first();
+
+        // Jika user ditemukan, reset password
+        if ($user) {
+            $user->password = Hash::make($request->password);  // Enkripsi password baru
+            $user->save();  // Simpan perubahan password
+
+            return redirect()->route('user.login')->with('success', 'Password berhasil diubah!');
+        }
+
+        // Jika NIK tidak ditemukan
+        return back()->withErrors(['nik' => 'NIK tidak ditemukan']);
+    }
+
     // Menampilkan halaman login untuk admin
     public function showAdminLoginForm()
     {

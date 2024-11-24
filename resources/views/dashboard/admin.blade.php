@@ -58,9 +58,18 @@
         <li class="nav-item">
           <a href="{{ route('admin.dashboard') }}" class="nav-link"><i class="fas fa-home"></i> Dashboard</a>
         </li>
+        <li class="nav-item">
+          <a href="{{ route('admin.export.siswa') }}" class="nav-link"><i class="fas fa-home"></i> Export Data Siswa</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ route('admin.export.ayah') }}" class="nav-link"><i class="fas fa-home"></i> Export Data Ayah</a>
+        </li><li class="nav-item">
+          <a href="{{ route('admin.export.ibu') }}" class="nav-link"><i class="fas fa-home"></i> Export Data Ibu</a>
+        </li><li class="nav-item">
+          <a href="{{ route('admin.export.wali') }}" class="nav-link"><i class="fas fa-home"></i> Export Data Wali</a>
+        </li>
       </ul>
     </nav>
-
     <!-- Content -->
     <div class="content">
       <button class="navbar-toggler d-md-none" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

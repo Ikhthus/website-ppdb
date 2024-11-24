@@ -26,6 +26,8 @@ Route::get('/register', [AuthController::class, 'showUserRegisterForm'])->name('
 Route::post('/register', [AuthController::class, 'userRegister']);
 Route::get('/', [AuthController::class, 'showUserLoginForm'])->name('user.login');
 Route::post('/', [AuthController::class, 'userLogin']);
+Route::get('/password/forgot', [AuthController::class, 'showForgotPasswordForm'])->name('password.request');
+Route::post('/password/reset', [AuthController::class, 'resetPassword'])->name('password.update');
 Route::get('/admin/login', [AuthController::class, 'showAdminLoginForm'])->name('admin.login');
 Route::post('/admin/login', [AuthController::class, 'adminLogin']);
 
@@ -45,11 +47,13 @@ Route::middleware(['auth'])->group(function () {
     Route::get('dashboard/pendaftaran/cetak', [DataSiswaController::class, 'PrintBuktiPendaftaran'])->name('pendaftaran.cetak');
     Route::get('/dashboard/pendaftaran/cetak-kartu', [DataSiswaController::class, 'PrintKartuUjian'])->name('pendaftaran.cetak.kartu');
     Route::get('/cetak-kartu', [DataSiswaController::class, 'cetakKartu'])->name('cetak.kartu');
-
 });
 
 Route::middleware(['auth:admin', 'admin'])->group(function () {
-    Route::get('/admin/dashboard',[AdminController::class, 'dashboard'] )->name('admin.dashboard');
+    Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
     Route::post('/admin/verifikasi/{id}', [AdminController::class, 'updateVerifikasi'])->name('admin.verifikasi');
-
+    Route::get('/admin/export/siswa', [AdminController::class, 'ExportDataSiswa'])->name('admin.export.siswa');
+    Route::get('/admin/export/ayah', [AdminController::class, 'ExportDataAyah'])->name('admin.export.ayah');
+    Route::get('/admin/export/ibu', [AdminController::class, 'ExportDataIbu'])->name('admin.export.ibu');
+    Route::get('/admin/export/wali', [AdminController::class, 'ExportDataWali'])->name('admin.export.wali');
 });

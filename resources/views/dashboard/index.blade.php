@@ -96,7 +96,7 @@
                     <a href="{{ route('pendaftaran.create.wali') }}" class="btn btn-custom mb-2"><i class="fas fa-user-shield"></i> Isi Form Pengisian Data Wali (JIKA SISWA TIDAK TINGGAL DENGAN ORANG TUA)</a>
                     <a href="{{ route('pendaftaran.create.program') }}" class="btn btn-custom mb-2"><i class="fas fa-pencil-alt"></i> Isi Form Program Kelas (SETELAH MENGISI DATA SISWA DAN ORANG TUA)</a>
                     <a href="{{ route('pendaftaran.cetak') }}" class="btn btn-custom mb-2"><i class="fas fa-file-pdf"></i> Cetak Bukti Pendaftaran</a>
-                    <a href="{{ route('pendaftaran.cetak.kartu') }}" class="btn btn-custom mb-2"><i class="fas fa-file-pdf"></i> Cetak Kartu Ujian</a>
+                    <!-- <a href="{{ route('pendaftaran.cetak.kartu') }}" class="btn btn-custom mb-2"><i class="fas fa-file-pdf"></i> Cetak Kartu Ujian</a> -->
                     <a href="{{ asset('surat_pernyataan.pdf') }}" type="application/pdf" class="btn btn-custom mb-2" target="_blank">
                         <i class="fas fa-file-alt"></i> Cetak Surat Pernyataan
                     </a>
