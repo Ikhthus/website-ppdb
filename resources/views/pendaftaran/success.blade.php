@@ -19,7 +19,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         h2 {
-            color: #007bff;
+            color: black;
         }
         .header {
             text-align: center;
@@ -42,7 +42,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <img src="{{asset('logo3.png')}}" alt="Logo">
+            <img src="{{$logoSrc}}" alt="Logo">
             <h2>Bukti Pendaftaran Online</h2>
             <p><strong>MIN 1 Kota Tangsel</strong></p>
         </div>
@@ -58,7 +58,7 @@
                 <!-- Tambahkan data lain sesuai kebutuhan -->
             </div>
         </div>
-        <button class="btn btn-primary print-button" onclick="window.print()">Cetak Bukti Pendaftaran</button>
+        <!-- <button class="btn btn-primary print-button" onclick="window.print()">Cetak Bukti Pendaftaran</button> -->
     </div>
 </body>
 </html>

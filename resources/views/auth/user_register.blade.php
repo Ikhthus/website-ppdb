@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,24 @@
     <!-- Link ke CSS Bootstrap -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        @media (max-width: 576px) {
+            .login-container {
+                margin: 20px;
+                padding: 20px;
+                box-shadow: none;
+                /* Hilangkan bayangan di perangkat kecil */
+            }
+
+            h2 {
+                font-size: 20px;
+                /* Sesuaikan ukuran font untuk layar kecil */
+            }
+        }
+
         body {
             background-color: #f8f9fa;
         }
+
         .login-container {
             max-width: 400px;
             margin: auto;
@@ -20,25 +36,31 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
             margin-top: 100px;
         }
+
         .login-container h2 {
             margin-bottom: 20px;
             color: seagreen;
         }
+
         .form-control {
             border-radius: 5px;
         }
+
         .btn-primary {
             background-color: seagreen;
             border: none;
         }
+
         .btn-primary:hover {
             background-color: darkgreen;
         }
+
         .alert {
             margin-top: 20px;
         }
     </style>
 </head>
+
 <body>
     <div class="login-container">
         <h2 class="text-center">Registrasi</h2>
@@ -64,13 +86,13 @@
         </form>
 
         @if ($errors->any())
-            <div class="alert alert-danger mt-3">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
+        <div class="alert alert-danger mt-3">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
         @endif
     </div>
 
@@ -79,4 +101,5 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>

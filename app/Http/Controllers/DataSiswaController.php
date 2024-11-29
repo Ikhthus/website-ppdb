@@ -60,7 +60,11 @@ class DataSiswaController extends Controller
             'nama_kepala_keluarga' => 'required|string|max:100',
         ]);
 
-        $uniqueNumber = intval(str_replace('.', '', uniqid('', true)));
+        $auth = auth()->user();
+        if ($auth->nik != $request->nik) {
+            return redirect()->route('pendaftaran.create')->withErrors(['error' => 'NIK tidak sesuai dengan NIK yang terdaftar']);
+        }
+        $uniqueNumber = random_int(1000000000, 9999999999);
         DataSiswa::create([
             'id_users' => auth()->id(),
             'no_pendaftaran' => $uniqueNumber,
@@ -129,7 +133,24 @@ class DataSiswaController extends Controller
         $idUser = auth()->id();
         $dataSiswa = DataSiswa::where('id_users', $idUser)->first();
         $program = Program::where('id_data_siswa', $dataSiswa->id)->first();
-        return view('pendaftaran.success', compact('dataSiswa', 'program'));
+
+        $logoPath = public_path('logo3.png');
+        $logoData = base64_encode(file_get_contents($logoPath));
+        $logoSrc = 'data:image/png;base64,' . $logoData;
+
+        $pdf = Pdf::loadView('pendaftaran.success', [
+            'dataSiswa' => $dataSiswa,
+            'program' => $program,
+            'logoSrc' => $logoSrc,
+        ])->setPaper('A4', 'portrait')->setOptions([
+            'isHtml5ParserEnabled' => true,
+            'isRemoteEnabled' => true,
+            'dpi' => 120, 
+            'defaultFont' => 'sans-serif',
+        ]);
+        return $pdf->download('bukti-ppdb.pdf');
+
+        // return view('pendaftaran.success', compact('dataSiswa', 'program'));
     }
 
     public function PrintKartuUjian()

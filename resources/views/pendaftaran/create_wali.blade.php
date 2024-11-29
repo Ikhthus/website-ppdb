@@ -51,6 +51,7 @@
   <div class="container mt-5">
     <div class="card p-4">
       <h2 class="text-center mb-4"><i class="fas fa-user-plus"></i>Form Pengisian Data Wali Siswa</h2>
+      <p class="text-center text-danger font-weight-bold">Mohon diisi dengan teliti!</p>
       @if (session('success'))
       <div class="alert alert-success">{{ session('success') }}</div>
       @endif
@@ -68,11 +69,11 @@
       <form action="{{ route('pendaftaran.store.wali') }}" method="POST">
         @csrf
         <div class="form-group">
-          <label for="nama_lengkap">Nama Lengkap:</label>
+          <label for="nama_lengkap">Nama Lengkap (*)</label>
           <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" required>
         </div>
         <div class="form-group">
-          <label for="kewarganegaraan">Kewarganegaraan:</label>
+          <label for="kewarganegaraan">Kewarganegaraan (*)</label>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="WNI" name="kewarganegaraan" value="WNI">
             <label class="form-check-label" for="WNI">WNI</label>
@@ -83,15 +84,15 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="tempat_lahir">Tempat Lahir:</label>
+          <label for="tempat_lahir">Tempat Lahir (*)</label>
           <input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir" required>
         </div>
         <div class="form-group">
-          <label for="tanggal_lahir">Tanggal Lahir:</label>
+          <label for="tanggal_lahir">Tanggal Lahir (*)</label>
           <input type="date" class="form-control" id="tanggal_lahir" name="tanggal_lahir" required>
         </div>
         <div class="form-group">
-          <label for="pendidikan_terakhir">Pendidikan Terakhir:</label><br>
+          <label for="pendidikan_terakhir">Pendidikan Terakhir (*)</label><br>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="sd_sederajat" name="pendidikan_terakhir" value="SD/Sederajat">
             <label class="form-check-label" for="sd_sederajat">SD/Sederajat</label>
@@ -134,7 +135,7 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="pekerjaan">Pekerjaan:</label>
+          <label for="pekerjaan">Pekerjaan (*)</label>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" name="pekerjaan" value="Tidak Bekerja" id="tidakBekerja">
             <label class="form-check-label" for="tidakBekerja">Tidak Bekerja</label>
@@ -201,7 +202,7 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="penghasilan">Penghasilan:</label>
+          <label for="penghasilan">Penghasilan (*)</label>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="penghasilan" value="Kurang dari 500.000" id="kurang500">
             <label class="form-check-label" for="kurang500">Kurang dari 500.000</label>
@@ -232,11 +233,11 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="no_handphone_aktif">No Handphone Aktif:</label>
+          <label for="no_handphone_aktif">No Handphone Aktif (*)</label>
           <input type="text" class="form-control" id="no_handphone_aktif" name="no_handphone_aktif" required>
         </div>
         <div class="form-group">
-          <label for="status_tempat_tinggal">Status Tempat Tinggal:</label>
+          <label for="status_tempat_tinggal">Status Tempat Tinggal (*)</label>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="status_tempat_tinggal" value="Milik Sendiri" id="milikSendiri">
             <label class="form-check-label" for="milikSendiri">Milik Sendiri</label>
@@ -263,35 +264,35 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="alamat">Alamat:</label>
+          <label for="alamat">Alamat (*)</label>
           <textarea class="form-control" id="alamat" name="alamat" required></textarea>
         </div>
         <div class="form-group">
-          <label for="provinsi">Provinsi:</label>
+          <label for="provinsi">Provinsi (*)</label>
           <input type="text" class="form-control" id="provinsi" name="provinsi" required>
         </div>
         <div class="form-group">
-          <label for="kabupaten_kota">Kabupaten/Kota:</label>
+          <label for="kabupaten_kota">Kabupaten/Kota (*)</label>
           <input type="text" class="form-control" id="kabupaten_kota" name="kabupaten_kota" required>
         </div>
         <div class="form-group">
-          <label for="kecamatan">Kecamatan:</label>
+          <label for="kecamatan">Kecamatan (*)</label>
           <input type="text" class="form-control" id="k ecamatan" name="kecamatan" required>
         </div>
         <div class="form-group">
-          <label for="kelurahan_desa">Kelurahan/Desa:</label>
+          <label for="kelurahan_desa">Kelurahan/Desa (*)</label>
           <input type="text" class="form-control" id="kelurahan_desa" name="kelurahan_desa" required>
         </div>
         <div class="form-group">
-          <label for="nama_jalan">Nama Jalan:</label>
+          <label for="nama_jalan">Nama Jalan (*)</label>
           <input type="text" class="form-control" id="nama_jalan" name="nama_jalan" required>
         </div>
         <div class="form-group">
-          <label for="kode_pos">Kode Pos:</label>
+          <label for="kode_pos">Kode Pos (*)</label>
           <input type="text" class="form-control" id="kode_pos" name="kode_pos" required>
         </div>
         <div class="form-group">
-          <label for="no_kk">No KK:</label>
+          <label for="no_kk">No KK (*)</label>
           <input type="text" class="form-control" id="no_kk" name="no_kk" required>
         </div>
         <button type="submit" class="btn btn-primary btn-block">Simpan</button>

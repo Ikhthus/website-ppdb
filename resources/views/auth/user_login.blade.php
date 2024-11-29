@@ -9,6 +9,20 @@
     <!-- Link ke CSS Bootstrap -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        @media (max-width: 576px) {
+            .login-container {
+                margin: 20px;
+                padding: 20px;
+                box-shadow: none;
+                /* Hilangkan bayangan di perangkat kecil */
+            }
+
+            h2 {
+                font-size: 20px;
+                /* Sesuaikan ukuran font untuk layar kecil */
+            }
+        }
+
         body {
             background-color: #f8f9fa;
         }

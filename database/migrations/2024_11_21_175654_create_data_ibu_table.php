@@ -33,8 +33,7 @@ return new class extends Migration
             $table->string('kelurahan_desa');
             $table->string('nama_jalan');
             $table->string('kode_pos');
-            $table->string('nomor_kk')->unique();
-            $table->string('hubungan');
+            $table->string('nomor_kk');
             $table->foreign('id_users')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('id_data_siswa')->references('id')->on('data_siswa')->onDelete('cascade');
             $table->timestamps();

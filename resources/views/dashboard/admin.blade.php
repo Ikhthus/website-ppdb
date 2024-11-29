@@ -89,6 +89,12 @@
       <h1>Welcome, Admin!</h1>
       <!-- <p class="lead">This is your admin dashboard. From here, you can manage users, view reports, and perform other administrative tasks.</p> -->
 
+      <form action="{{ route('logout') }}" method="POST" class="d-inline">
+                @csrf
+                <button type="submit" class="btn logout-button">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </form>
       <div class="card mt-4">
         <div class="card-header bg-primary text-white">
           <i class="fas fa-users"></i> Recent Users
@@ -99,6 +105,7 @@
               <tr>
                 <th>#</th>
                 <th>NAMA</th>
+                <th>NO PENDAFTARAN</th>
                 <th>NIK</th>
                 <th>NISN</th>
                 <th>KELAS</th>
@@ -111,6 +118,7 @@
               <tr>
                 <td>{{ $loop->iteration + ($siswa->currentPage() - 1) * $siswa->perPage() }}</td> <!-- Menghitung nomor urut -->
                 <td>{{ $data->dataSiswa->nama_lengkap }}</td>
+                <td>{{ $data->dataSiswa->no_pendaftaran }}</td>
                 <td>{{ $data->dataSiswa->nik }}</td>
                 <td>{{ $data->dataSiswa->nisn }}</td>
                 <td>{{ $data->kelas }}</td>
@@ -119,9 +127,9 @@
                   <!-- Tombol Lolos -->
                   <form action="{{ route('admin.verifikasi', $data->dataSiswa->id) }}" method="POST" class="d-inline">
                     @csrf
-                    <input type="hidden" name="status" value="Lolos">
-                    <button type="submit" class="btn btn-sm btn-info">
-                      <i class="fas fa-check"></i> Lolos
+                    <input type="hidden" name="status" value="Lolos Seleksi Berkas">
+                    <button type="submit" class="btn-sm btn-info mr-1 mb-1">
+                      <i class="fas fa-check"></i> Lolos Seleksi Berkas
                     </button>
                   </form>
 
@@ -129,8 +137,16 @@
                   <form action="{{ route('admin.verifikasi', $data->dataSiswa->id) }}" method="POST" class="d-inline">
                     @csrf
                     <input type="hidden" name="status" value="Tidak Lolos">
-                    <button type="submit" class="btn btn-sm btn-danger">
+                    <button type="submit" class="btn btn-sm btn-info mr-1 mb-1">
                       <i class="fas fa-times"></i> Tidak Lolos
+                    </button>
+                  </form>
+
+                  <form action="{{ route('admin.verifikasi', $data->dataSiswa->id) }}" method="POST" class="d-inline">
+                    @csrf
+                    <input type="hidden" name="status" value="Lolos Seleksi Kematangan">
+                    <button type="submit" class="btn btn-sm btn-info mr-1 mb-1">
+                      <i class="fas fa-check"></i> Lolos Seleksi Kematangan
                     </button>
                   </form>
                 </td>

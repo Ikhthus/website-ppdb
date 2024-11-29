@@ -49,6 +49,7 @@
     <div class="container mt-5">
         <div class="card p-4">
             <h2 class="text-center mb-4"><i class="fas fa-user-plus"></i> Form Pengisian Data Siswa</h2>
+            <p class="text-center text-danger font-weight-bold">Mohon diisi dengan teliti!</p>
 
             @if (session('success'))
             <div class="alert alert-success">{{ session('success') }}</div>
@@ -67,15 +68,15 @@
             <form action="{{ route('pendaftaran.store') }}" method="POST">
                 @csrf
                 <div class="form-group">
-                    <label for="nama_lengkap">Nama Lengkap</label>
+                    <label for="nama_lengkap">Nama Lengkap (*)</label>
                     <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" required>
                 </div>
                 <div class="form-group">
-                    <label for="nisn">NISN</label>
+                    <label for="nisn">NISN (*)</label>
                     <input type="text" class="form-control" id="nisn" name="nisn" required>
                 </div>
                 <div class="form-group">
-                    <label for="kewarganegaraan">Kewarganegaraan:</label>
+                    <label for="kewarganegaraan">Kewarganegaraan (*)</label>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="WNI" name="kewarganegaraan" value="WNI">
                         <label class="form-check-label" for="WNI">WNI</label>
@@ -86,19 +87,19 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="nik">NIK</label>
+                    <label for="nik">NIK (*)</label>
                     <input type="text" class="form-control" id="nik" name="nik" required>
                 </div>
                 <div class="form-group">
-                    <label for="tempat_lahir">Tempat Lahir</label>
+                    <label for="tempat_lahir">Tempat Lahir (*)</label>
                     <input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir" required>
                 </div>
                 <div class="form-group">
-                    <label for="tanggal_lahir">Tanggal Lahir</label>
+                    <label for="tanggal_lahir">Tanggal Lahir (*)</label>
                     <input type="date" class="form-control" id="tanggal_lahir" name="tanggal_lahir" required>
                 </div>
                 <div class="form-group">
-                    <label for="jenis_kelamin">Jenis Kelamin</label>
+                    <label for="jenis_kelamin">Jenis Kelamin (*)</label>
                     <select class="form-control" id="jenis_kelamin" name="jenis_kelamin" required>
                         <option value="">Pilih Jenis Kelamin</option>
                         <option value="Laki-laki">Laki-laki</option>
@@ -106,31 +107,31 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="anak_ke">Anak Ke</label>
+                    <label for="anak_ke">Anak Ke (*)</label>
                     <input type="text" class="form-control" id="anak_ke" name="anak_ke" required>
                 </div>
                 <div class="form-group">
-                    <label for="jumlah_saudara">Jumlah Saudara</label>
+                    <label for="jumlah_saudara">Jumlah Saudara (*)</label>
                     <input type="text" class="form-control " id="jumlah_saudara" name="jumlah_saudara" required>
                 </div>
                 <div class="form-group">
-                    <label for="agama">Agama</label>
+                    <label for="agama">Agama (*)</label>
                     <input type="text" class="form-control" id="agama" name="agama" required>
                 </div>
                 <div class="form-group">
-                    <label for="cita_cita">Cita-cita</label>
+                    <label for="cita_cita">Cita-cita (*)</label>
                     <input type="text" class="form-control" id="cita_cita" name="cita_cita" required>
                 </div>
                 <div class="form-group">
-                    <label for="no_handphone">No Handphone</label>
+                    <label for="no_handphone">No Handphone (*)</label>
                     <input type="text" class="form-control" id="no_handphone" name="no_handphone" required>
                 </div>
                 <div class="form-group">
-                    <label for="hobi">Hobi</label>
+                    <label for="hobi">Hobi (*)</label>
                     <input type="text" class="form-control" id="hobi" name="hobi" required>
                 </div>
                 <div class="form-group col-md-6">
-                    <label>Status Tempat Tinggal</label><br>
+                    <label>Status Tempat Tinggal (*)</label><br>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="tinggal_orangtua" name="status_tempat_tinggal" value="Tinggal dengan Orangtua/Wali">
                         <label class="form-check-label" for="tinggal_orangtua">Tinggal dengan Orangtua/Wali</label>
@@ -165,31 +166,31 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="provinsi">Provinsi</label>
+                    <label for="provinsi">Provinsi (*)</label>
                     <input type="text" class="form-control" id="provinsi" name="provinsi" required>
                 </div>
                 <div class="form-group">
-                    <label for="kabupaten_kota">Kabupaten/Kota</label>
+                    <label for="kabupaten_kota">Kabupaten/Kota (*)</label>
                     <input type="text" class="form-control" id="kabupaten_kota" name="kabupaten_kota" required>
                 </div>
                 <div class="form-group">
-                    <label for="kecamatan">Kecamatan</label>
+                    <label for="kecamatan">Kecamatan (*)</label>
                     <input type="text" class="form-control" id="kecamatan" name="kecamatan" required>
                 </div>
                 <div class="form-group">
-                    <label for="kelurahan_desa">Kelurahan/Desa</label>
+                    <label for="kelurahan_desa">Kelurahan/Desa (*)</label>
                     <input type="text" class="form-control" id="kelurahan_desa" name="kelurahan_desa" required>
                 </div>
                 <div class="form-group">
-                    <label for="nama_jalan">Nama Jalan</label>
+                    <label for="nama_jalan">Nama Jalan (*)</label>
                     <input type="text" class="form-control" id="nama_jalan" name="nama_jalan" required>
                 </div>
                 <div class="form-group">
-                    <label for="kode_pos">Kode Pos</label>
+                    <label for="kode_pos">Kode Pos (*)</label>
                     <input type="text" class="form-control" id="kode_pos" name="kode_pos" required>
                 </div>
                 <div class="form-group col-md-6">
-                    <label>Transport Ke Sekolah</label><br>
+                    <label>Transport Ke Sekolah (*)</label><br>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="jalan_kaki" name="transport_ke_sekolah" value="Jalan Kaki">
                         <label class="form-check-label" for="jalan_kaki">Jalan Kaki</label>
@@ -224,7 +225,7 @@
                     </div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label>Jarak Tempuh</label><br>
+                    <label>Jarak Tempuh (*)</label><br>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="kurang_dari_5_km" name="jarak_tempuh" value="Kurang dari 5 Km">
                         <label class="form-check-label" for="kurang_dari_5_km">Kurang dari 5 Km</label>
@@ -247,7 +248,7 @@
                     </div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label>Waktu Tempuh</label><br>
+                    <label>Waktu Tempuh (*)</label><br>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="1_10_menit" name="waktu_tempuh" value="1-10 Menit">
                         <label class="form-check-label" for="1_10_menit">1-10 Menit</label>
@@ -274,7 +275,7 @@
                     </div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label>Yang Membiayai Sekolah</label><br>
+                    <label>Yang Membiayai Sekolah (*)</label><br>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="orang_tua" name="membiayai_sekolah" value="Orang Tua">
                         <label class="form-check-label" for="orang_tua">Orang Tua</label>
@@ -293,7 +294,7 @@
                     </div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label>Pendidikan Pra-Sekolah</label><br>
+                    <label>Pendidikan Pra-Sekolah (*)</label><br>
                     <div class=" form-check">
                         <input class="form-check-input" type="checkbox" id="pernah_tk_ra" name="pra_sekolah" value="Pernah TK/RA">
                         <label class="form-check-label" for="pernah_tk_ra">Pernah TK/RA</label>
@@ -304,7 +305,7 @@
                     </div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label>Imunisasi</label><br>
+                    <label>Imunisasi (*)</label><br>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="hepatitis_b" name="imunisasi" value="Hepatitis B">
                         <label class="form-check-label" for="hepatitis_b">Hepatitis B</label>
@@ -335,14 +336,14 @@
                     <input type="text" class="form-control" id="nomor_kip" name="nomor_kip">
                 </div>
                 <div class="form-group">
-                    <label for="nomor_kk">Nomor KK</label>
+                    <label for="nomor_kk">Nomor KK (*)</label>
                     <input type="text" class="form-control" id="nomor_kk" name="nomor_kk" required>
                 </div>
                 <div class="form-group">
                     <label for="nama_kepala_keluarga">Nama Kepala Keluarga</label>
                     <input type="text" class="form-control" id="nama_kepala_keluarga" name="nama_kepala_keluarga" required>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block">Daftar</button>
+                <button type="submit" class="btn btn-primary btn-block">Simpan</button>
             </form>
         </div>
     </div>

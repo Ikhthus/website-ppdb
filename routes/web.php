@@ -19,13 +19,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     echo "Selamat Datang di Sistem Informasi Pendaftaran Siswa Baru";
-// });
+Route::get('/', function () {
+    return view('welcome');
+})->name('welcome');
+Route::get('/persyaratan', function () {
+    return view('persyaratan');
+})->name('persyaratan');
+Route::get('prosedur', function () {
+    return view('prosedur');
+})->name('prosedur');
+Route::get('jadwal', function () {
+    return view('jadwal');
+})->name('jadwal');
+Route::get('contact', function () {
+    return view('contact');
+})->name('contact');
+
 Route::get('/register', [AuthController::class, 'showUserRegisterForm'])->name('user.register');
 Route::post('/register', [AuthController::class, 'userRegister']);
-Route::get('/', [AuthController::class, 'showUserLoginForm'])->name('user.login');
-Route::post('/', [AuthController::class, 'userLogin']);
+Route::get('/login', [AuthController::class, 'showUserLoginForm'])->name('user.login');
+Route::post('/login', [AuthController::class, 'userLogin']);
 Route::get('/password/forgot', [AuthController::class, 'showForgotPasswordForm'])->name('password.request');
 Route::post('/password/reset', [AuthController::class, 'resetPassword'])->name('password.update');
 Route::get('/admin/login', [AuthController::class, 'showAdminLoginForm'])->name('admin.login');
@@ -46,7 +59,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/dashboard/pendaftaran/program', [DataSiswaController::class, 'InsertProgramKelas'])->name('pendaftaran.store.program');
     Route::get('dashboard/pendaftaran/cetak', [DataSiswaController::class, 'PrintBuktiPendaftaran'])->name('pendaftaran.cetak');
     Route::get('/dashboard/pendaftaran/cetak-kartu', [DataSiswaController::class, 'PrintKartuUjian'])->name('pendaftaran.cetak.kartu');
-    Route::get('/cetak-kartu', [DataSiswaController::class, 'cetakKartu'])->name('cetak.kartu');
+    // Route::get('/cetak-kartu', [DataSiswaController::class, 'cetakKartu'])->name('cetak.kartu');
 });
 
 Route::middleware(['auth:admin', 'admin'])->group(function () {

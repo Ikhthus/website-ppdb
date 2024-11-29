@@ -42,7 +42,7 @@ return new class extends Migration
             $table->string('pra_sekolah');
             $table->string('imunisasi');
             $table->string('nomor_kip')->nullable();
-            $table->string('nomor_kk')->unique();
+            $table->string('nomor_kk');
             $table->string('nama_kepala_keluarga');
             $table->foreign('id_users')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

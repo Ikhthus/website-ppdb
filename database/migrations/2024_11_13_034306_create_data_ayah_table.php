@@ -33,8 +33,7 @@ return new class extends Migration
             $table->string('kelurahan_desa');
             $table->string('nama_jalan');
             $table->string('kode_pos');
-            $table->string('nomor_kk')->unique();
-            $table->string('hubungan');
+            $table->string('nomor_kk');
             $table->string('no_kks')->nullable();
             $table->string('no_pkh')->nullable();
             $table->foreign('id_users')->references('id')->on('users')->onDelete('cascade');
@@ -48,6 +47,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('data_orang_tua');
+        Schema::dropIfExists('data_ayah');
     }
 };

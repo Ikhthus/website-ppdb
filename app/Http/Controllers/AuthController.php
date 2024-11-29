@@ -19,9 +19,13 @@ class AuthController extends Controller
     // Menangani register user
     public function userRegister(Request $request)
     {
+        $maxRegistrants = env("MAX_REGISTRANTS");
+        if (User::count() >= $maxRegistrants) {
+            return redirect()->back()->withErrors(['registration_closed' => 'Pendaftaran telah ditutup karena kuota sudah penuh.']);
+        }
         $request->validate([
             'nik' => 'required|unique:users,nik',
-            'asal_sekolah' => 'required|string|max:255',
+            'asal_sekolah' => 'max:255',
             'password' => 'required|string|min:6|confirmed',
         ]);
 
