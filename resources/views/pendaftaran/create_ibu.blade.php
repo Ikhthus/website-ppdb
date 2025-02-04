@@ -312,12 +312,12 @@
           <input type="text" class="form-control" id="nama_jalan" name="nama_jalan" required>
         </div>
         <div class="form-group">
-          <label for="kode_pos">Kode Pos (*)</label>
-          <input type="text" class="form-control" id="kode_pos" name="kode_pos" required>
+          <label for="kode_pos">Kode Pos </label>
+          <input type="text" class="form-control" id="kode_pos" name="kode_pos">
         </div>
         <div class="form-group">
-          <label for="nomor_kk">Nomor KK (*)</label>
-          <input type="text" class="form-control" id="nomor_kk" name="nomor_kk" required>
+          <label for="no_kk">Nomor KK (*)</label>
+          <input type="text" class="form-control" id="no_kk" name="no_kk" required>
         </div>
         <button type="submit" class="btn btn-primary btn-block">Simpan</button>
       </form>

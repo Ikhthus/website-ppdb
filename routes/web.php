@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DataSiswaController;
 use App\Http\Controllers\DataAyahController;
+use App\Http\Controllers\DataIbuController;
 use App\Http\Controllers\DataWaliSiswaController;
 use App\Http\Controllers\AdminController;
 use App\Models\DataSiswa;
@@ -51,8 +52,8 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/dashboard/pendaftaran', [DataSiswaController::class, 'store'])->name('pendaftaran.store');
     Route::get('/dashboard/pendaftaran/ayah', [DataAyahController::class, 'create'])->name('pendaftaran.create.ayah');
     Route::post('/dashboard/pendaftaran/ayah', [DataAyahController::class, 'store'])->name('pendaftaran.store.ayah');
-    Route::get('/dashboard/pendaftaran/ibu', [DataAyahController::class, 'create'])->name('pendaftaran.create.ibu');
-    Route::post('/dashboard/pendaftaran/ibu', [DataAyahController::class, 'store'])->name('pendaftaran.store.ibu');
+    Route::get('/dashboard/pendaftaran/ibu', [DataIbuController::class, 'create'])->name('pendaftaran.create.ibu');
+    Route::post('/dashboard/pendaftaran/ibu', [DataIbuController::class, 'store'])->name('pendaftaran.store.ibu');
     Route::get('/dashboard/pendaftaran/wali', [DataWaliSiswaController::class, 'create'])->name('pendaftaran.create.wali');
     Route::post('/dashboard/pendaftaran/wali', [DataWaliSiswaController::class, 'store'])->name('pendaftaran.store.wali');
     Route::get('/dashboard/pendaftaran/program', [DataSiswaController::class, 'createProgramKelas'])->name('pendaftaran.create.program');

@@ -14,6 +14,7 @@ class DataWaliExport implements FromView
     {
         return view('export.data_wali', [
             'data_wali' => DataWaliSiswa::all()
+            // 'data_siswa' => DataSiswa::all()
         ]);
     }
 }

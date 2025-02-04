@@ -14,6 +14,7 @@ class DataIbuExport implements FromView
     {
         return view('export.data_ibu', [
             'data_ibu' => DataIbu::all()
+            // 'data_siswa' => DataSiswa::all()
         ]);
     }
 }

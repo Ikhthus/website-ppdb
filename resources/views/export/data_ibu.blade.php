@@ -19,7 +19,7 @@
         <th>Kelurahan Desa</th>
         <th>Nama Jalan</th>
         <th>Kode Pos</th>
-        <th>Nomor KK</th>
+        <th>NO KK</th>
     </tr>
     </thead>
     <tbody>
@@ -43,7 +43,7 @@
             <td width="auto">{{ $user->kelurahan_desa }}</td>
             <td width="auto">{{ $user->nama_jalan }}</td>
             <td width="auto">{{ $user->kode_pos }}</td>
-            <td width="auto">{{ $user->nomor_kk }}</td>
+            <td width="auto">{{ $user->no_kk }}</td>
         </tr>
     @endforeach
     </tbody>

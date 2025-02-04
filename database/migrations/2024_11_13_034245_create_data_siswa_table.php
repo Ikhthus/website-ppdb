@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_users');
             $table->string('no_pendaftaran')->unique();
             $table->string('nama_lengkap');
-            $table->string('nisn')->unique();
+            $table->string('nisn')->nullable();
             $table->string('kewarganegaraan');
             $table->string('nik')->unique();
             $table->string('tempat_lahir');
@@ -25,9 +25,9 @@ return new class extends Migration
             $table->string('anak_ke');
             $table->string('jumlah_saudara');
             $table->string('agama');
-            $table->string('cita_cita');
-            $table->string('no_handphone');
-            $table->string('hobi');
+            $table->string('cita_cita')->nullable();
+            $table->string('no_handphone')->nullable();
+            $table->string('hobi')->nullable();
             $table->string('status_tempat_tinggal');
             $table->string('provinsi');
             $table->string('kabupaten_kota');
@@ -39,10 +39,10 @@ return new class extends Migration
             $table->string('jarak_tempuh');
             $table->string('waktu_tempuh');
             $table->string('membiayai_sekolah');
-            $table->string('pra_sekolah');
-            $table->string('imunisasi');
-            $table->string('nomor_kip')->nullable();
-            $table->string('nomor_kk');
+            $table->string('pra_sekolah')->nullable();
+            $table->string('imunisasi')->nullable();
+            $table->string('no_kip')->nullable();
+            $table->string('no_kk');
             $table->string('nama_kepala_keluarga');
             $table->foreign('id_users')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

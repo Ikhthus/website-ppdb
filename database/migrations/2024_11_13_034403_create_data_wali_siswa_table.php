@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_data_siswa');
             $table->unsignedBigInteger('id_users');
             $table->string('nama_lengkap');
+            $table->string('nama_siswa');
             $table->string('kewarganegaraan');
             $table->string('tempat_lahir');
             $table->date('tanggal_lahir');

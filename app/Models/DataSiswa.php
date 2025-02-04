@@ -40,8 +40,8 @@ class DataSiswa extends Authenticatable
         'membiayai_sekolah',
         'pra_sekolah',
         'imunisasi',
-        'nomor_kip',
-        'nomor_kk',
+        'no_kip',
+        'no_kk',
         'nama_kepala_keluarga',
     ];
 

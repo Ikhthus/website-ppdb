@@ -38,16 +38,17 @@ class DataAyahController extends Controller
             'kecamatan' => 'required|string|max:50',
             'kelurahan_desa' => 'required|string|max:50',
             'nama_jalan' => 'required|string|max:255',
-            'kode_pos' => 'required|string|max:10',
-            'nomor_kk' => 'required|string|max:16',
+            'kode_pos' => 'nullable|string|max:10',
+            'no_kk' => 'required|string|max:16',
         ]);
 
         // Add `id_users` and `id_data_siswa` based on logged-in user
         $validatedData['id_users'] = $user->id;
         $validatedData['id_data_siswa'] = $dataSiswa->id;
+        $validatedData['nama_siswa'] = $dataSiswa->nama_lengkap;
 
         DataAyah::create($validatedData);
-        return redirect()->route('user.dashboard')->with('success', 'Pendaftaran berhasil!');
+        return redirect()->route('user.dashboard')->with('success', 'Berhasil mengisi formulir!');
     }
     
 }

@@ -28,9 +28,15 @@ class DataSiswaController extends Controller
 
     public function store(Request $request)
     {
+        $existingData = DataSiswa::where('id_users', auth()->id())->first();
+
+        if ($existingData) {
+            return redirect()->route('dashboard.index')->withErrors(['error' => 'Anda hanya dapat mengisi formulir satu kali.']);
+        }
+
         $request->validate([
             'nama_lengkap' => 'required|string|max:255',
-            'nisn' => 'required|string|max:20',
+            'nisn' => 'nullable|max:20',
             'kewarganegaraan' => 'required|string|max:50',
             'nik' => 'required|string|max:20',
             'tempat_lahir' => 'required|string|max:50',
@@ -39,9 +45,9 @@ class DataSiswaController extends Controller
             'anak_ke' => 'required|string|max:10',
             'jumlah_saudara' => 'required|string|max:10',
             'agama' => 'required|string|max:20',
-            'cita_cita' => 'required|string|max:50',
-            'no_handphone' => 'required|string|max:15',
-            'hobi' => 'required|string|max:50',
+            'cita_cita' => 'nullable|string|max:50',
+            'no_handphone' => 'nullable|string|max:15',
+            'hobi' => 'nullable|string|max:50',
             'status_tempat_tinggal' => 'required|string|max:50',
             'provinsi' => 'required|string|max:50',
             'kabupaten_kota' => 'required|string|max:50',
@@ -53,10 +59,10 @@ class DataSiswaController extends Controller
             'jarak_tempuh' => 'required|string|max:20',
             'waktu_tempuh' => 'required|string|max:20',
             'membiayai_sekolah' => 'required|string|max:50',
-            'pra_sekolah' => 'required|string|max:50',
-            'imunisasi' => 'required|string|max:50',
-            'nomor_kip' => 'nullable|string|max:20',
-            'nomor_kk' => 'required|string|max:20',
+            'pra_sekolah' => 'nullable|string|max:50',
+            'imunisasi' => 'nullable|string|max:50',
+            'no_kip' => 'nullable|string|max:20',
+            'no_kk' => 'required|string|max:20',
             'nama_kepala_keluarga' => 'required|string|max:100',
         ]);
 
@@ -67,7 +73,7 @@ class DataSiswaController extends Controller
         $uniqueNumber = random_int(1000000000, 9999999999);
         DataSiswa::create([
             'id_users' => auth()->id(),
-            'no_pendaftaran' => $uniqueNumber,
+            'no_pendaftaran' => '2025' . $uniqueNumber,
             'nama_lengkap' => $request->nama_lengkap,
             'nisn' => $request->nisn,
             'kewarganegaraan' => $request->kewarganegaraan,
@@ -94,12 +100,12 @@ class DataSiswaController extends Controller
             'membiayai_sekolah' => $request->membiayai_sekolah,
             'pra_sekolah' => $request->pra_sekolah,
             'imunisasi' => $request->imunisasi,
-            'nomor_kip' => $request->nomor_kip,
-            'nomor_kk' => $request->nomor_kk,
+            'no_kip' => $request->no_kip,
+            'no_kk' => $request->no_kk,
             'nama_kepala_keluarga' => $request->nama_kepala_keluarga,
         ]);
 
-        return redirect()->route('user.dashboard')->with('success', 'Pendaftaran berhasil!');
+        return redirect()->route('user.dashboard')->with('success', 'Berhasil mengisi formulir!');
     }
 
 
@@ -145,7 +151,7 @@ class DataSiswaController extends Controller
         ])->setPaper('A4', 'portrait')->setOptions([
             'isHtml5ParserEnabled' => true,
             'isRemoteEnabled' => true,
-            'dpi' => 120, 
+            'dpi' => 120,
             'defaultFont' => 'sans-serif',
         ]);
         return $pdf->download('bukti-ppdb.pdf');

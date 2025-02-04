@@ -15,6 +15,7 @@ class DataIbu extends Authenticatable
         'id_data_siswa',
         'id_users',
         'nama_lengkap',
+        'nama_siswa',
         'status',
         'nik',
         'kewarganegaraan',
@@ -32,6 +33,6 @@ class DataIbu extends Authenticatable
         'kelurahan_desa',
         'nama_jalan',
         'kode_pos',
-        'nomor_kk', 
+        'no_kk', 
     ];
 }

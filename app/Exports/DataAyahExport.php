@@ -14,6 +14,7 @@ class DataAyahExport implements FromView
     {
         return view('export.data_ayah', [
             'data_ayah' => DataAyah::all()
+            // 'data_siswa' => DataSiswa::all()
         ]);
     }
 }

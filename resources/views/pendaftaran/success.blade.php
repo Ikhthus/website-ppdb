@@ -51,6 +51,7 @@
                 <h5>Data Siswa</h5>
                 <hr>
                 <p><strong>NIK:</strong> {{ $dataSiswa->nik }}</p>
+                <p><strong>No. Pendaftaran:</strong> {{ $dataSiswa->no_pendaftaran }}</p>
                 <p><strong>Nama:</strong> {{ $dataSiswa->nama_lengkap }}</p>
                 <p><strong>Tempat, Tanggal Lahir:</strong> {{ $dataSiswa->tempat_lahir }}, {{ \Carbon\Carbon::parse($dataSiswa->tanggal_lahir)->format('d-m-Y') }}</p>
                 <p><strong>Alamat:</strong> {{ $dataSiswa->provinsi }}, {{ $dataSiswa->kabupaten_kota }}, {{ $dataSiswa->kecamatan }}, {{ $dataSiswa->kelurahan_desa }}, {{ $dataSiswa->nama_jalan }}</p>

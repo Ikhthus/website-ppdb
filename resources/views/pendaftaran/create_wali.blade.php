@@ -288,8 +288,8 @@
           <input type="text" class="form-control" id="nama_jalan" name="nama_jalan" required>
         </div>
         <div class="form-group">
-          <label for="kode_pos">Kode Pos (*)</label>
-          <input type="text" class="form-control" id="kode_pos" name="kode_pos" required>
+          <label for="kode_pos">Kode Pos </label>
+          <input type="text" class="form-control" id="kode_pos" name="kode_pos" >
         </div>
         <div class="form-group">
           <label for="no_kk">No KK (*)</label>

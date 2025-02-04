@@ -108,15 +108,13 @@
       <div class="row">
         <div class="col-md-8 mx-auto">
           <ol class="list-group list-group-numbered">
-            <li class="list-group-item">Melihat informasi PPDB dan Sekolah MIN 1 KOTA TANGSEL melalui website: <a href="http://ppdb.min1tangsel.sch.id" target="_blank">http://ppdb.min1tangsel.sch.id</a></li>
+            <li class="list-group-item">Melihat informasi PPDB dan Sekolah MIN 1 KOTA TANGSEL melalui website: <a href="https://ppdb.min1tangsel.com" target="_blank">https://ppdb.min1tangsel.com</a></li>
             <li class="list-group-item">Mendaftar (membuat akun PPDB) melalui website dengan membuka menu <strong>"Pendaftaran"</strong>.</li>
             <li class="list-group-item">Login di website PPDB dengan memilih menu <strong>"Login"</strong>, masukkan NIK dan Password.</li>
             <li class="list-group-item">Mengisi formulir dengan lengkap, form yang bertanda bintang (*) wajib diisi.</li>
             <li class="list-group-item">Panitia memverifikasi berkas calon peserta didik.</li>
             <li class="list-group-item">Mengikuti tes seleksi sesuai dengan jadwal yang sudah ditentukan.</li>
-            <!-- <li class="list-group-item">Melihat hasil tes di website: <a href="http://ppdb.alazhar-bsd.sch.id" target="_blank">http://ppdb.alazhar-bsd.sch.id</a>, pilih menu <strong>"Hasil Tes"</strong>.</li> -->
             <li class="list-group-item">Bagi siswa yang diterima, wajib melakukan daftar ulang.</li>
-            <!-- <li class="list-group-item">Siswa dengan hasil tes <strong>"Cadangan"</strong>, harap konfirmasi 8 hari kerja setelah pengumuman untuk mendapat disposisi.</li> -->
           </ol>
         </div>
       </div>

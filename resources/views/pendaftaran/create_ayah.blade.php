@@ -54,7 +54,7 @@
 <body>
   <div class="container mt-5">
     <div class="card p-4">
-      <h2 class="text-center mb-4"><i class="fas fa-user-plus"></i> Form Pengisian Data Orang Tua</h2>
+      <h2 class="text-center mb-4"><i class="fas fa-user-plus"></i> Form Pengisian Data Ayah</h2>
       <p class="text-center text-danger font-weight-bold">Mohon diisi dengan teliti!</p>
       @if (session('success'))
       <div class="alert alert-success">{{ session('success') }}</div>
@@ -311,12 +311,12 @@
           <input type="text" class="form-control" id="nama_jalan" name="nama_jalan" required>
         </div>
         <div class="form-group">
-          <label for="kode_pos">Kode Pos (*)</label>
-          <input type="text" class="form-control" id="kode_pos" name="kode_pos" required>
+          <label for="kode_pos">Kode Pos </label>
+          <input type="text" class="form-control" id="kode_pos" name="kode_pos">
         </div>
         <div class="form-group">
-          <label for="nomor_kk">Nomor KK (*)</label>
-          <input type="text" class="form-control" id="nomor_kk" name="nomor_kk" required>
+          <label for="no_kk">Nomor KK (*)</label>
+          <input type="text" class="form-control" id="no_kk" name="no_kk" required>
         </div>
         <div class="form-group">
           <label for="nomor_kks">Nomor KKS (JIKA ADA)</label>

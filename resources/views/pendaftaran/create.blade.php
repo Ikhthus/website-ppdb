@@ -72,8 +72,8 @@
                     <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" required>
                 </div>
                 <div class="form-group">
-                    <label for="nisn">NISN (*)</label>
-                    <input type="text" class="form-control" id="nisn" name="nisn" required>
+                    <label for="nisn">NISN </label>
+                    <input type="text" class="form-control" id="nisn" name="nisn">
                 </div>
                 <div class="form-group">
                     <label for="kewarganegaraan">Kewarganegaraan (*)</label>
@@ -119,16 +119,16 @@
                     <input type="text" class="form-control" id="agama" name="agama" required>
                 </div>
                 <div class="form-group">
-                    <label for="cita_cita">Cita-cita (*)</label>
-                    <input type="text" class="form-control" id="cita_cita" name="cita_cita" required>
+                    <label for="cita_cita">Cita-cita</label>
+                    <input type="text" class="form-control" id="cita_cita" name="cita_cita">
                 </div>
                 <div class="form-group">
-                    <label for="no_handphone">No Handphone (*)</label>
-                    <input type="text" class="form-control" id="no_handphone" name="no_handphone" required>
+                    <label for="no_handphone">No Handphone </label>
+                    <input type="text" class="form-control" id="no_handphone" name="no_handphone" >
                 </div>
                 <div class="form-group">
-                    <label for="hobi">Hobi (*)</label>
-                    <input type="text" class="form-control" id="hobi" name="hobi" required>
+                    <label for="hobi">Hobi</label>
+                    <input type="text" class="form-control" id="hobi" name="hobi">
                 </div>
                 <div class="form-group col-md-6">
                     <label>Status Tempat Tinggal (*)</label><br>
@@ -294,7 +294,7 @@
                     </div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label>Pendidikan Pra-Sekolah (*)</label><br>
+                    <label>Pendidikan Pra-Sekolah</label><br>
                     <div class=" form-check">
                         <input class="form-check-input" type="checkbox" id="pernah_tk_ra" name="pra_sekolah" value="Pernah TK/RA">
                         <label class="form-check-label" for="pernah_tk_ra">Pernah TK/RA</label>
@@ -305,7 +305,7 @@
                     </div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label>Imunisasi (*)</label><br>
+                    <label>Imunisasi</label><br>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="hepatitis_b" name="imunisasi" value="Hepatitis B">
                         <label class="form-check-label" for="hepatitis_b">Hepatitis B</label>
@@ -332,16 +332,16 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="nomor_kip">Nomor KIP (optional)</label>
-                    <input type="text" class="form-control" id="nomor_kip" name="nomor_kip">
+                    <label for="no_kip">Nomor KIP</label>
+                    <input type="text" class="form-control" id="no_kip" name="no_kip">
                 </div>
                 <div class="form-group">
-                    <label for="nomor_kk">Nomor KK (*)</label>
-                    <input type="text" class="form-control" id="nomor_kk" name="nomor_kk" required>
+                    <label for="no_kk">Nomor KK (*)</label>
+                    <input type="text" class="form-control" id="no_kk" name="no_kk" required>
                 </div>
                 <div class="form-group">
-                    <label for="nama_kepala_keluarga">Nama Kepala Keluarga</label>
-                    <input type="text" class="form-control" id="nama_kepala_keluarga" name="nama_kepala_keluarga" required>
+                    <label for="nama_kepala_keluarga">Nama Kepala Keluarga (*)</label>
+                    <input type="text" class="form-control" id="nama_kepala_keluarga" name="nama_kepala_keluarga">
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">Simpan</button>
             </form>

@@ -16,6 +16,7 @@ class DataWaliSiswa extends Authenticatable
         'id_data_siswa',
         'id_users',
         'nama_lengkap',
+        'nama_siswa',
         'kewarganegaraan',
         'tempat_lahir',
         'tanggal_lahir',

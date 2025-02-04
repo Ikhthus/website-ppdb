@@ -72,7 +72,7 @@
             </div>
             <div class="form-group">
                 <label for="asal_sekolah">Asal Sekolah</label>
-                <input type="text" class="form-control" id="asal_sekolah" name="asal_sekolah" placeholder="Asal Sekolah" required>
+                <input type="text" class="form-control" id="asal_sekolah" name="asal_sekolah" placeholder="Asal Sekolah">
             </div>
             <div class="form-group">
                 <label for="password">Password</label>

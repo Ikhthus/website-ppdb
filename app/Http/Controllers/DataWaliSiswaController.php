@@ -36,16 +36,17 @@ class DataWaliSiswaController extends Controller
             'kecamatan' => 'required|string|max:50',
             'kelurahan_desa' => 'required|string|max:50',
             'nama_jalan' => 'required|string|max:255',
-            'kode_pos' => 'required|string|max:10',
+            'kode_pos' => 'nullable|string|max:10',
             'no_kk' => 'required|string|max:16',
         ]);
 
         $validatedData['id_users'] = $user->id;
         $validatedData['id_data_siswa'] = $dataSiswa->id;
+        $validatedData['nama_siswa'] = $dataSiswa->nama_lengkap;
 
         DataWaliSiswa::create($validatedData);
 
-        return redirect()->route('data_wali_siswa.index')->with('success', 'Data wali siswa berhasil ditambahkan');
+        return redirect()->route('data_wali_siswa.index')->with('success', 'Berhasil mengisi formulir');
     }
 
 }

@@ -28,8 +28,8 @@
         <th>Membiayai Sekolah</th>
         <th>Pra Sekolah</th>
         <th>Imunisasi</th>
-        <th>Nomor KIP</th>
-        <th>Nomor KK</th>
+        <th>NO KIP</th>
+        <th>NO KK</th>
         <th>Nama Kepala Keluarga</th>
     </tr>
     </thead>
@@ -63,8 +63,8 @@
             <td width="auto">{{ $user->membiayai_sekolah }}</td>
             <td width="auto">{{ $user->pra_sekolah }}</td>
             <td width="auto">{{ $user->imunisasi }}</td>
-            <td width="auto">{{ $user->nomor_kip }}</td>
-            <td width="auto">{{ $user->nomor_kk }}</td>
+            <td width="auto">{{ $user->no_kip }}</td>
+            <td width="auto">{{ $user->no_kk }}</td>
             <td width="auto">{{ $user->nama_kepala_keluarga }}</td>
 
         </tr>

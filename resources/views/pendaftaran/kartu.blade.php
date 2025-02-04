@@ -134,7 +134,7 @@
         </tr>
         <tr>
           <td>Asal Sekolah</td>
-          <td>: {{ auth()->user()->asal_sekolah }}</td>
+          <td>: {{ auth()->user()->asal_sekolah ?? '' }}</td>
         </tr>
       </table>
 

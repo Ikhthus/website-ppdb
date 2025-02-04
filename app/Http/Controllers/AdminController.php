@@ -18,7 +18,7 @@ class AdminController extends Controller
     //
     public function dashboard()
     {
-        $siswa = Program::with(['dataSiswa', 'user', 'verifikasi'])->paginate(10); // Menggunakan paginate
+        $siswa = Program::with(['dataSiswa', 'user', 'verifikasi'])->get(); // Menggunakan paginate
         return view('dashboard.admin', compact('siswa'));
     }
 
@@ -45,19 +45,23 @@ class AdminController extends Controller
         return redirect()->back()->with('success', 'Status verifikasi berhasil diperbarui!');
     }
 
-    public function ExportDataSiswa() {
+    public function ExportDataSiswa()
+    {
         return Excel::download(new DataSiswaExport, 'data_siswa.xlsx');
     }
 
-    public function ExportDataAyah() {
+    public function ExportDataAyah()
+    {
         return Excel::download(new DataAyahExport, 'data_ayah.xlsx');
     }
 
-    public function ExportDataIbu() {
+    public function ExportDataIbu()
+    {
         return Excel::download(new DataIbuExport, 'data_ibu.xlsx');
     }
 
-    public function ExportDataWali() {
+    public function ExportDataWali()
+    {
         return Excel::download(new DataWaliExport, 'data_wali.xlsx');
     }
 }

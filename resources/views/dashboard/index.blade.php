@@ -85,7 +85,7 @@
             </div>
             <div class="card-body">
                 <h5 class="card-title">NIK: <strong>{{ auth()->user()->nik }}</strong></h5>
-                <h5 class="card-title">Asal Sekolah: <strong>{{ auth()->user()->asal_sekolah }}</strong></h5>
+                <h5 class="card-title">Asal Sekolah: <strong>{{ auth()->user()->asal_sekolah ?? '' }}</strong></h5>
                 <h5 class="card-title">Status : <strong>{{$verifikasi->status ?? 'Belum diverifikasi'}}</strong></h5>
                 <br><br>
                 <p class="card-text">Anda dapat mengisi formulir pendaftaran siswa di bawah ini.</p>
@@ -118,7 +118,7 @@
             <li>Fotokopi Kartu Keluarga 2 Lembar</li>
             <li>Pas Foto 3x4 2 Lembar</li>
             <li>Surat Keterangan Pendidikan Sebelumnya TK/RA/PAUD (NISN Jika ada)</li>
-            <li>Surat Pernyataan memaati ketentuan dan tata tertib PPDB MIN 1 Kota Tangsel bermaterai 10.000</li>
+            <li>Surat Pernyataan mentaati ketentuan dan tata tertib PPDB MIN 1 Kota Tangsel bermaterai 10.000</li>
         </div>
     </div>
 

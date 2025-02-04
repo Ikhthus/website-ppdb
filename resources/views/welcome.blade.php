@@ -88,7 +88,7 @@
   <!-- Header -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="{{route('welcome')}}">
         <img src="{{asset('logo3.png')}}" alt="Logo" height="50">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -128,8 +128,8 @@
         <img src="{{asset('slide1.png')}}" class="d-block w-100"
           alt="Banner 1">
         <div class="carousel-caption d-none d-md-block">
-          <!-- <h3>Welcome to PPDB Al-Azhar BSD</h3>
-          <p>Pendaftaran TK - SD - SMP - SMA Islam Al-Azhar BSD</p> -->
+          <!-- <h3>Welcome to PPDB MIN1 TANGSEL</h3>
+          <p>Pendaftaran MIN1 TANGSEL</p> -->
         </div>
       </div>
 
@@ -142,16 +142,6 @@
           <p>Daftar sekarang dan dapatkan pengalaman belajar terbaik!</p> -->
         </div>
       </div>
-
-      <!-- Slide 3 -->
-      <!-- <div class="carousel-item">
-        <img src="https://ppdb.alazhar-bsd.sch.id/front-assets/images/slider/bg2.jpg" class="d-block w-100"
-          alt="Banner 3">
-        <div class="carousel-caption d-none d-md-block"> -->
-      <!-- <h5>Program Unggulan dan Fasilitas Modern</h5>
-          <p>Kami memberikan pendidikan terbaik dengan fasilitas lengkap.</p> -->
-      <!-- </div>
-      </div> -->
     </div>
 
     <!-- Controls -->
@@ -179,7 +169,7 @@
       </address>
     </div>
   </section>
-
+    <br>
   <!-- Footer -->
   <footer class="footer">
     <div class="container">

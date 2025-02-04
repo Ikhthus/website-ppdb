@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_data_siswa');
             $table->unsignedBigInteger('id_users');
             $table->string('nama_lengkap');
+            $table->string('nama_siswa');
             $table->string('status');
             $table->string('nik')->unique();
             $table->string('kewarganegaraan');
@@ -33,7 +34,7 @@ return new class extends Migration
             $table->string('kelurahan_desa');
             $table->string('nama_jalan');
             $table->string('kode_pos');
-            $table->string('nomor_kk');
+            $table->string('no_kk');
             $table->string('no_kks')->nullable();
             $table->string('no_pkh')->nullable();
             $table->foreign('id_users')->references('id')->on('users')->onDelete('cascade');

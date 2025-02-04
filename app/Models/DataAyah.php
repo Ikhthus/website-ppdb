@@ -15,6 +15,7 @@ class DataAyah extends Authenticatable
         'id_data_siswa',
         'id_users',
         'nama_lengkap',
+        'nama_siswa',
         'status',
         'nik',
         'kewarganegaraan',
@@ -32,7 +33,7 @@ class DataAyah extends Authenticatable
         'kelurahan_desa',
         'nama_jalan',
         'kode_pos',
-        'nomor_kk', 
+        'no_kk', 
         'no_kks',
         'no_pkh'
     ];
