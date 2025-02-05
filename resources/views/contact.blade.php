@@ -156,9 +156,9 @@
                   <p>Jl. Masjid Arriyadh No.48, RT.4/RW.3, Cipayung<br>
                     Kec. Ciputat, Kota Tangerang Selatan, Banten 15411</p>
                   <p>Telp: (0265) 656565<br>
-                    Whatsapp: <a href="https://wa.me/085755898691"
+                    Whatsapp: <a href="https://wa.me/6285755898691"
                       target="_blank">0857-5589-8691</a><br>
-                    WhatsApp:<a href="https://wa.me/081210793190"
+                    WhatsApp:<a href="https://wa.me/6281210793190"
                     target="_blank">0812-1079-3190</a><br></p>
                 </address>
 
