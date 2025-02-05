@@ -97,6 +97,9 @@
         <div class="register-link">
             <p><a href="{{ route('password.request') }}">Lupa password</a></p>
         </div>
+        <div class="mt-3 d-flex justify-content-center">
+            <button onclick="window.history.back()" class="btn btn-secondary">Kembali</button>
+        </div>
     </div>
 
     <!-- Link ke JS Bootstrap dan jQuery -->

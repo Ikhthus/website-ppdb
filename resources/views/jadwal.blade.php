@@ -127,33 +127,51 @@
           <tbody>
             <tr>
               <td>1</td>
-              <td>Pendaftaran Online</td>
-              <td>16 Februari 2024 - 17 Februari 2024</td>
-              <td>Melalui website PPDB</td>
+              <td>Sosialisasi PPDB</td>
+              <td>7 Februari 2025 - 8 Februari 2025</td>
+              <td>Sosialisasi PPDB</td>
             </tr>
             <tr>
               <td>2</td>
-              <td>Penyerahan Berkas</td>
-              <td>19 Januari 2024 - 20 Februari 2024</td>
-              <td>Oleh Pendaftar</td>
+              <td>Pendaftaran Online</td>
+              <td>13 Februari 2025 - 14 Februari 2025</td>
+              <td>Pendaftaran Online</td>
             </tr>
             <tr>
               <td>3</td>
-              <td>Pengumuman Lolos Seleksi Berkas</td>
-              <td>24 Februari 2024</td>
-              <td>Dapat dilihat di website PPDB</td>
+              <td>Penyerahan Berkas</td>
+              <td>17 Februari 2025 - 18 Februari 2025</td>
+              <td>Penyerahan Berkas</td>
             </tr>
             <tr>
               <td>4</td>
-              <td>Pelaksanaan Seleksi Kematangan</td>
-              <td>02 Maret 2024</td>
-              <td>Di sekolah</td>
+              <td>Pengumuman</td>
+              <td>20 Februari 2025</td>
+              <td>Pengumuman Lolos seleksi berkas</td>
             </tr>
             <tr>
               <td>5</td>
-              <td>Pengumuman Hasil PPDB</td>
-              <td>09 Maret 2024</td>
-              <td>Dapat dilihat di website PPDB</td>
+              <td>Seleksi Kematangan</td>
+              <td>22 Februari 2025</td>
+              <td>Seleksi Kematangan</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Pengumuman Seleksi</td>
+              <td>5 Maret 2025</td>
+              <td>Pengumuman Seleksi Kematangan</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Rapat</td>
+              <td>8 Maret 2025</td>
+              <td>Rapat calon wali murid</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Daftar Ulang</td>
+              <td>10 Maret 2025 - 12 Maret 2025</td>
+              <td>Daftar Ulang</td>
             </tr>
           </tbody>
         </table>

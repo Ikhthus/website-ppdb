@@ -94,6 +94,10 @@
             </ul>
         </div>
         @endif
+        <div class="mt-3 d-flex justify-content-between">
+            <a href="{{ route('user.login') }}" class="btn btn-success">Login</a>
+            <button onclick="window.history.back()" class="btn btn-secondary">Kembali</button>
+        </div>
     </div>
 
     <!-- Link ke JS Bootstrap dan jQuery -->

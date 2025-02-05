@@ -108,13 +108,17 @@
       <div class="row">
         <div class="col-md-8 mx-auto">
           <ol class="list-group list-group-numbered">
-            <li class="list-group-item">Melihat informasi PPDB dan Sekolah MIN 1 KOTA TANGSEL melalui website: <a href="https://ppdb.min1tangsel.com" target="_blank">https://ppdb.min1tangsel.com</a></li>
-            <li class="list-group-item">Mendaftar (membuat akun PPDB) melalui website dengan membuka menu <strong>"Pendaftaran"</strong>.</li>
+            <li class="list-group-item">Melihat informasi PPDB melalui sosial media dan website MIN 1 Kota Tangerang Selatan.</li>
+            <li class="list-group-item">Mendaftar (membuat akun PPDB) melalui website: http://ppdb.min1tangsel.com,  dengan membuka menu <strong>Pendaftaran</strong></li>
             <li class="list-group-item">Login di website PPDB dengan memilih menu <strong>"Login"</strong>, masukkan NIK dan Password.</li>
-            <li class="list-group-item">Mengisi formulir dengan lengkap, form yang bertanda bintang (*) wajib diisi.</li>
-            <li class="list-group-item">Panitia memverifikasi berkas calon peserta didik.</li>
-            <li class="list-group-item">Mengikuti tes seleksi sesuai dengan jadwal yang sudah ditentukan.</li>
-            <li class="list-group-item">Bagi siswa yang diterima, wajib melakukan daftar ulang.</li>
+            <li class="list-group-item">Mengisi formulir dengan lengkap dan teliti, form yang bertanda bintang (*) wajib diisi.</li>
+            <li class="list-group-item">Mencetak Bukti Pendaftaran online.</li>
+            <li class="list-group-item">Menyerahkan Bukti pendaftaran online dan berkas-berkas yang ditentukan ke Madrasah.</li>
+            <li class="list-group-item">Melihat hasil seleksi berkas di website: <a href="http://ppdb.min1tangsel.com" target="_blank">http://ppdb.min1tangsel.com</a>.</li>
+            <li class="list-group-item">Mengikuti tes seleksi kematangan dan kesiapan sesuai dengan jadwal yang sudah ditentukan (Jika lolos seleksi berkas).</li>
+            <li class="list-group-item">Melihat hasil tes di website : <a href="http://ppdb.min1tangsel.com" target="_blank">http://ppdb.min1tangsel.com.</a></li>
+            <li class="list-group-item">Bagi siswa yang diterima, wajib melakukan daftar ulang di waktu dan tempat yang sudah ditentukan
+            </li>
           </ol>
         </div>
       </div>

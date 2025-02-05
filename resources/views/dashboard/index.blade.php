@@ -113,12 +113,12 @@
         <!-- Additional Information Section -->
         <div class="info-section">
             <h4>Berkas Yang Dibutuhkan Untuk Verifikasi di Sekolah</h4>
-            <li>Cetak Bukti Pendaftaran Online PPDB MIN 1 Kota Tangsel</li>
-            <li>Fotokopi Akta Kelahiran 2 Lembar</li>
-            <li>Fotokopi Kartu Keluarga 2 Lembar</li>
-            <li>Pas Foto 3x4 2 Lembar</li>
-            <li>Surat Keterangan Pendidikan Sebelumnya TK/RA/PAUD (NISN Jika ada)</li>
-            <li>Surat Pernyataan mentaati ketentuan dan tata tertib PPDB MIN 1 Kota Tangsel bermaterai 10.000</li>
+            <li>Cetak bukti pendaftaran online PPDB MI Negeri 1 Kota Tangerang Selatan</li>
+            <li>Fotokopi Akte Kelahiran 1 Lembar</li>
+            <li>Fotokopi Kartu Keluarga 1 Lembar</li>
+            <li>Pas foto berwarna ditempel pada bukti pendaftaran</li>
+            <li>NISN/Surat Keterangan Pendidikan Sebelumnya TK/RA/PAUD (jika ada)</li>
+            <li>Surat pernyataan menaati ketentuan dan tata tertib PPDB MI Negeri 1 Kota Tang-Sel yang telah ditandatangani orangtua/wali dan dilengkapi materai 10.000</li>
         </div>
     </div>
 

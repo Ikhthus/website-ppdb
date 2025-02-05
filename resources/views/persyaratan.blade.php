@@ -127,13 +127,8 @@
       <div class="card-body text-center">
         <h5 class="card-title">Syarat Pendaftaran</h5>
         <ol>
-          <li>Calon peserta didik berusia minimal 6 tahun pada 1 Juli 2025</li>
-          <li>Cetak Bukti Pendaftaran Online</li>
-          <li>Fotokopi Akte Kelahiran (2 lembar) wajib</li>
-          <li>Fotokopi Kartu Keluarga (2 lembar) wajib terbaru dari dukcapil (berbarcode)</li>
-          <li>Pas Foto 3x4 2 lembar</li>
-          <li>Surat Keterangan Pendidikan Sebelumnya TK/RA/PAUD (NISN Jika ada)</li>
-          <li>Mengisi Surat Pernyataan Mentaati Ketentuan dan Tata Tertib PPDB MI Negeri 1 Kota Tangerang Selatan (Format dapat diunduh)</li>
+          <li>Berusia paling rendah 6 (enam) tahun pada tanggal 1 Juli tahun 2025</li>
+          <li>Berusia kurang dari 6 (enam) tahun yang memiliki kecerdasan istimewa/bakat istimewa atau kesiapan belajar dapat diterima yang dibuktikan dengan rekomendasi tertulis dari psikolog profesional</li>
         </ol>
       </div>
     </div>
