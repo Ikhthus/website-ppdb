@@ -158,7 +158,8 @@
                   <p>Telp: (0265) 656565<br>
                     Whatsapp: <a href="https://wa.me/085755898691"
                       target="_blank">0857-5589-8691</a><br>
-                    Email: ppdb.min1tangsel@gmail.com</p>
+                    WhatsApp:<a href="https://wa.me/081210793190"
+                    target="_blank">0812-1079-3190</a><br></p>
                 </address>
 
               </li>
