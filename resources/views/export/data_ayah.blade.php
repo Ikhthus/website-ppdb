@@ -2,6 +2,7 @@
     <thead>
     <tr>
         <th>Nama</th>
+        <th>Nama Siswa</th>
         <th>Status</th>
         <th>NIK</th>
         <th>Kewarganegaraan</th>
@@ -28,6 +29,7 @@
     @foreach($data_ayah as $user)
         <tr>
             <td width="auto">{{ $user->nama_lengkap }}</td>
+            <td width="auto">{{ $user->nama_siswa }}</td>
             <td width="auto">{{ $user->status }}</td>
             <td width="auto">{{ $user->nik }}</td>
             <td width="auto">{{ $user->kewarganegaraan }}</td>

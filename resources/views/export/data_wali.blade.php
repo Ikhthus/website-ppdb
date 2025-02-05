@@ -2,6 +2,7 @@
     <thead>
     <tr>
         <th>Nama</th>
+        <th>Nama Siswa</th>
         <th>Kewarganegaraan</th>
         <th>Tempat Lahir</th>
         <th>Tanggal Lahir</th>
@@ -25,6 +26,7 @@
     @foreach($data_wali as $user)
         <tr>
             <td width="auto">{{ $user->nama_lengkap }}</td>
+            <td width="auto">{{ $user->nama_siswa }}</td>
             <td width="auto">{{ $user->kewarganegaraan }}</td>
             <td width="auto">{{ $user->tempat_lahir }}</td>
             <td width="auto">{{ $user->tanggal_lahir }}</td>
